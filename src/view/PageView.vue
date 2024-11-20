@@ -3,18 +3,15 @@
     <div class="body">
       <router-view />
     </div>
-    
   </div>
 </template>
 
 <script setup name="PageView"></script>
 
 <style scoped>
-.body{
+.body {
   background-color: white;
   width: 96%;
-  margin: auto;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-left: 2%;
 }
 </style>

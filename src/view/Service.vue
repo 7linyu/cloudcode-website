@@ -50,54 +50,56 @@
           </div>
         </div>
       </div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <DreamchaseProject/>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <ApplyCooperation/>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      <div>hhhh</div>
+      
     </div>
   </div>
 </template>
 <script setup name="Service">
 import { useRouter } from 'vue-router'
 import { onMounted } from 'vue'
+import DreamchaseProject from './DreamchaseProject.vue';
+import ApplyCooperation from './ApplyCooperation.vue';
 import WOW from 'wow.js'
-import service1 from '@/assets/img/service1.jpg'
-import service2 from '@/assets/img/service2.jpg'
-import service3 from '@/assets/img/service3.jpg'
-import service4 from '@/assets/img/service4.jpg'
-const serviceList = [
-  {
-    id: 'section-1',
-    title: '软件定制开发',
-    eng_title: 'Customize App',
-    img: service1
-  },
-  {
-    id: 'section-2',
-    title: 'IT外包服务',
-    eng_title: 'Outsourcing',
-    img: service2
-  },
-  {
-    id: 'section-3',
-    title: '网上商城建设',
-    eng_title: 'eCommerce Site',
-    img: service3
-  },
-  {
-    id: 'section-4',
-    title: 'iOS应用定制开发',
-    eng_title: 'iOS App Dev',
-    img: service4
-  }
-]
+
+
 
 const router = useRouter()
 
-function ServiceClick(id) {
-  router.push({
-    name: 'serviceDetail',
-    state: {
-      id
-    }
-  })
-}
+
 onMounted(() => {
   var wow = new WOW()
   wow.init()
@@ -255,7 +257,7 @@ onMounted(() => {
   height: auto; /* 保持图片的纵横比 */
 }
 .green-box {
-  width: 280%;            /* 使盒子的宽度为屏幕宽度的 180% */
+  width: 100%;            /* 使盒子的宽度为屏幕宽度的 180% */
   height: 10px;           /* 高度为 10px */
   background-color: #65A49B;  /* 设置背景颜色为绿色 */
   margin-left: -500px;     /* 左移 10px */
