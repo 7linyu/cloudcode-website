@@ -1,44 +1,35 @@
 <template>
+<div class="navbar">
+  <div class="navbar-left" style="display: flex; align-items: center; width: 100%;">
+    <router-link to="/new-page">
+      <img src="@/assets/img/logo.png" alt="Logo" class="navbar-logo" />
+    </router-link>
+    <span class="navbar-text">云萌工作室</span>
+  </div>
+  <div class="navbar-right">
+    <a href="#" class="navbar-lang">简体中文</a>
+    <span class="navbar-divider">/</span>
+    <a href="#" class="navbar-lang">繁體中文</a>
+    <span class="navbar-divider">/</span>
+    <a href="#" class="navbar-lang">English</a>
+  </div>
+</div>
+<div>
+  <div class="green-box"></div>
+</div>
+
+<div>
+
+  <img src="@/assets/img/cloud.jpg" class="responsive-img" />
+
+</div>
   <div id="Service">
     <div class="container text-center">
       <h3>我们的服务</h3>
       <p style="color: #b2b2b2">The Best Service You Never See</p>
     </div>
     <div class="container">
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
-      <div>hhhh</div>
+
       <div class="Service-container row">
         <div
           class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp"
@@ -180,5 +171,97 @@ onMounted(() => {
   width: 90%;
   height: 90%;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.navbar-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #65A49B;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* 禁止换行 */
+}
+
+.navbar-lang {
+  font-size: 14px;
+  color: #65A49B;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;  /* 使字体加粗 */
+}
+
+.navbar-lang:hover {
+  text-decoration: underline;
+}
+
+.navbar-divider {
+  font-size: 14px;
+  color: #666;
+}
+/* 添加媒体查询实现自适应 */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .navbar-left {
+    transform: translateX(0); /* 移除默认偏移 */
+    margin-bottom: 10px; /* 添加下间距 */
+    justify-content: center;
+  }
+
+  .navbar-right {
+    justify-content: center;
+    /* flex-wrap: wrap; 在屏幕很窄时支持换行 */
+    margin-left: 0; /* 重置左边距 */
+    margin-top: 10px; /* 增加顶部间距 */
+  }
+
+  .navbar-lang {
+    margin: 0 10px 5px; /* 语言选项间距调整 */
+  }
+
+  .navbar-divider {
+    display: none; /* 隐藏分隔符，节省空间 */
+  }
+}
+/* 图片css */
+.responsive-img {
+  width: 100%; /* 设置图片宽度为100%，让它适应父容器 */
+  height: auto; /* 保持图片的纵横比 */
+}
+.green-box {
+  width: 280%;            /* 使盒子的宽度为屏幕宽度的 180% */
+  height: 10px;           /* 高度为 10px */
+  background-color: #65A49B;  /* 设置背景颜色为绿色 */
+  margin-left: -500px;     /* 左移 10px */
+  margin-top: -20px;      /* 上移 10px */
+}
+
+
 </style>
 
