@@ -16,7 +16,7 @@ const routes = [
   {
     path: '/',
     name: 'PageView',
-    redirect: '/home',
+    redirect: '/service',
     component: () => import('@/view/PageView.vue'),
     children: [
       {
