@@ -10,7 +10,7 @@
           />
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
-          <h3>网站建设文化传播有限公司</h3>
+          <h3>网maochunmsb</h3>
           <p class=".text-justify">
             有家软件公司, 是一家以高科技创意为核心的技术服务公司,
             聚集了众多对软件开发和界面设计有独特创意的高端人才,
