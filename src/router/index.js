@@ -28,15 +28,15 @@ const routes = [
           title: '云萌官网'
         }
       },
-      {
-        path: '/about',
-        name: 'about',
-        component: () => import('@/view/AboutPage.vue'),
-        props: true,
-        meta: {
-          title: '云萌新益科技有限公司'
-        }
-      },
+      // {
+      //   path: '/about',
+      //   name: 'about',
+      //   component: () => import('@/view/AboutPage.vue'),
+      //   props: true,
+      //   meta: {
+      //     title: '云萌新益科技有限公司'
+      //   }
+      // },
     ]
   }
 ]

@@ -3,7 +3,7 @@
     <div style="margin-right: 30%;">
       <h1>筑梦计划</h1>
       <h3>自云萌成立以来，我们一直热衷于帮助<br>
-          团队内外需要帮助的有志青年</h3>
+        团队内外需要帮助的有志青年</h3>
       <h4>累计资助了xx场比赛<br>
         为1000余名青年提供助学支持
         <br>
@@ -13,7 +13,7 @@
         <br>
       </h4>
     </div>
-    
+
     <div class="grid-container">
       <div class="grid-item green g001">
         <img src="../img/1.png" alt="">
@@ -24,7 +24,7 @@
         <p>竞赛支持</p>
       </div>
       <div class="grid-item yellow g003">
-        <img src="../img/3.png" alt=""/>
+        <img src="../img/3.png" alt="" />
         <p>服务评价</p>
       </div>
       <div class="grid-item green g004">
@@ -35,9 +35,8 @@
   </div>
 </template>
 
-<script setup>
-name = "DreamchaseProject";
-</script>
+<script setup name="DreamChaseProject"></script>
+
 
 <style scoped>
 h1 {
@@ -74,15 +73,18 @@ h4 {
 .grid-item {
   text-align: center;
   background-color: #f0f0f0;
-  padding: 10px; /* 减少内边距 */
+  padding: 10px;
+  /* 减少内边距 */
   width: 180px;
   height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0; /* 确保外边距为0 */
-  border-radius: 2px; /* 默认边角为2px */
+  margin: 0;
+  /* 确保外边距为0 */
+  border-radius: 2px;
+  /* 默认边角为2px */
 }
 
 .grid-item img {
@@ -120,5 +122,4 @@ h4 {
 .g004 {
   border-bottom-right-radius: 10px;
 }
-
 </style>
