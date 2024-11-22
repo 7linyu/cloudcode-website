@@ -32,15 +32,26 @@ const qqgroup = import.meta.env.VITE_APP_QQGROUP
   width: 100%;
   height: 100%;
   color: #fff;
-  background: #474747;
+  background: #050505;
   overflow: hidden;
-  text-align: center;
+  /* 移除 text-align: center; */
 }
 
 .logo {
   width: 95px;
   height: 45px;
   margin: 50px auto 20px;
+  /* 保持logo居中 */
+}
+
+.title,
+.address_tel_fax,
+.email_wx,
+.copy {
+  /* 添加以下属性以实现左侧对齐 */
+  text-align: left;
+  padding-left: 20px;
+  /* 可选：为文本添加一些左侧内边距，使其不紧贴容器边缘 */
 }
 
 .title {
@@ -48,21 +59,19 @@ const qqgroup = import.meta.env.VITE_APP_QQGROUP
   margin-bottom: 20px;
 }
 
-.address_tel_fax {
-  color: #d3d3d3;
-  font-size: 14px;
-  margin: 10px 0;
-}
-
-.email_wx {
-  color: #d3d3d3;
-  font-size: 14px;
-}
-
+.address_tel_fax,
+.email_wx,
 .copy {
   color: #d3d3d3;
   font-size: 14px;
-  margin: 50px 0 10px;
+  margin: 10px 0;
+  /* 注意：这里的margin可能需要针对.copy进行单独调整 */
+}
+
+/* 注意：.copy的margin可能需要不同于.address_tel_fax和.email_wx，因为通常版权信息会放置在页脚底部 */
+.copy {
+  margin: 0 0 10px 20px;
+  /* 调整为顶部和底部无外边距，左侧添加内边距（如果已添加padding-left，则此处无需再添加） */
 }
 
 @media screen and (max-width: 997px) {
@@ -70,18 +79,16 @@ const qqgroup = import.meta.env.VITE_APP_QQGROUP
     font-size: 20px;
   }
 
-  .address_tel_fax {
-    font-size: 12px;
-  }
-
+  .address_tel_fax,
   .email_wx {
     font-size: 12px;
   }
 
   .copy {
     font-size: 12px;
-    margin: 30px 0 10px;
+    /* 针对小屏幕调整margin，可能需要根据实际情况调整 */
+    margin: 0 0 10px 20px;
+    /* 或者使用 padding-left 而不是 margin-top */
   }
 }
 </style>
-
