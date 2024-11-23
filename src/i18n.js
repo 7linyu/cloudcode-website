@@ -1,23 +1,29 @@
-// src/i18n.js
 import { createI18n } from 'vue-i18n';
 
 const messages = {
   'zh-CN': {
-    language: '简体中文',
-    // 添加其他简体中文翻译
+    navbar: {
+      title: '云萌工作室',
+      lang: '简体中文 / 繁體中文 / English',
+    },
   },
   'zh-TW': {
-    language: '繁體中文',
-    // 添加其他繁体中文翻译
+    navbar: {
+      title: '雲萌工作室',
+      lang: '简體中文 / 繁體中文 / English',
+    },
   },
-  'en': {
-    language: 'English',
-    // 添加其他英文翻译
-  }
+  en: {
+    navbar: {
+      title: 'Cloud Studio',
+      lang: '简体中文 / 繁體中文 / English',
+    },
+  },
 };
 
 const i18n = createI18n({
-  locale: 'zh-CN', // 默认语言
+  locale: 'en', // 默认语言
+  fallbackLocale: 'en', // 回退语言
   messages,
 });
 
