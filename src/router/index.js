@@ -1,4 +1,6 @@
 import { createRouter as _createRouter, createWebHashHistory } from 'vue-router'
+// import 'zenticons/lib/index.css';
+
 
 // const pages = import.meta.glob('../src/pages/**/*.vue')
 // const routes = Object.keys(pages).map((path)=>{

@@ -1,94 +1,59 @@
 <template>
   <div id="footer" class="container-fluid">
-    <div class="logo">
-      <img src="@/assets/img/logo.png" alt="logo图" />
-    </div>
-    <p class="title">公司企业网站模板</p>
-    <p class="address_tel_fax">
-      <p>地址：{{ address }}</p>
-      <p>QQ群：<a style="color:#fff" target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=ce9f5f0d1d7553fb5634521f79a89668ad0d798eb35047f93300df63ebae4c05">{{ qqgroup }}</a></p>
+    <p class="title">云萌工作室</p>
+    <p>地址：四川省成都市都江堰市青城山镇长寿社区3栋1层1号</p>
+    <p>邮箱：<a href="mailto:support@cloudcode.team">support@cloudcode.team</a></p>
+    <p>友情链接：<a href="https://geek.cloudcode.team" target="_blank">云萌极客站</a> | <a href="https://learn.cloudcode.team"
+        target="_blank">网工教学平台</a></p>
+    <p class="icp">
+      © 2022-2023 CloudCode Team. All Rights Reserved |
+      <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022018075号-2</a> |
+      <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51018102000210" target="_blank">川公网安备
+        51018102000210号</a>
     </p>
-    <p class="email_wx">
-      <p>博客：<a :href='blog + "neveryu/"' style="color:#fff">{{ blog }}</a></p>
-      <p>邮箱：{{ email }}</p>
-      <p>公司QQ号：{{ qq }}</p>
-    </p>
-    <p class="copy">Copyright &copy; 2018 - Now {{ company }}</p>
   </div>
 </template>
 
 <script setup name="Footer">
-const address = import.meta.env.VITE_APP_ADDRESS
-const phone = import.meta.env.VITE_APP_PHONE
-const email = import.meta.env.VITE_APP_EMAIL
-const qq = import.meta.env.VITE_APP_QQ
-const company = import.meta.env.VITE_APP_COMPANYNAME
-const blog = import.meta.env.VITE_APP_BLOG
-const qqgroup = import.meta.env.VITE_APP_QQGROUP
 </script>
 
 <style scoped>
 #footer {
   width: 100%;
-  height: 100%;
+  height: auto;
   color: #fff;
   background: #050505;
-  overflow: hidden;
-  /* 移除 text-align: center; */
-}
-
-.logo {
-  width: 95px;
-  height: 45px;
-  margin: 50px auto 20px;
-  /* 保持logo居中 */
-}
-
-.title,
-.address_tel_fax,
-.email_wx,
-.copy {
-  /* 添加以下属性以实现左侧对齐 */
-  text-align: left;
-  padding-left: 20px;
-  /* 可选：为文本添加一些左侧内边距，使其不紧贴容器边缘 */
+  padding: 10px 100px 20px 50px;
 }
 
 .title {
+  color: #ffffff;
   font-size: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.address_tel_fax,
-.email_wx,
-.copy {
+p {
   color: #d3d3d3;
-  font-size: 14px;
-  margin: 10px 0;
-  /* 注意：这里的margin可能需要针对.copy进行单独调整 */
+  font-size: 12px;
+  margin: 5px;
+  text-align: left;
 }
 
-/* 注意：.copy的margin可能需要不同于.address_tel_fax和.email_wx，因为通常版权信息会放置在页脚底部 */
-.copy {
-  margin: 0 0 10px 20px;
-  /* 调整为顶部和底部无外边距，左侧添加内边距（如果已添加padding-left，则此处无需再添加） */
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 997px) {
-  .title {
-    font-size: 20px;
-  }
+a:hover {
+  color: #65A39A;
+  text-decoration: underline;
+}
 
-  .address_tel_fax,
-  .email_wx {
-    font-size: 12px;
-  }
-
-  .copy {
-    font-size: 12px;
-    /* 针对小屏幕调整margin，可能需要根据实际情况调整 */
-    margin: 0 0 10px 20px;
-    /* 或者使用 padding-left 而不是 margin-top */
-  }
+.icp {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: left;
+  color: #d3d3d3;
 }
 </style>
