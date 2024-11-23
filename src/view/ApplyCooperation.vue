@@ -31,7 +31,8 @@ h4 {
   margin-bottom: 30px;
 }
 .main{
-    margin-left: 3%;
+    padding: 5% ;
+    /* margin-left: 3%; */
     
   }
 </style>

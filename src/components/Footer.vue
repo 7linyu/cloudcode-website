@@ -23,7 +23,7 @@
   height: auto;
   color: #fff;
   background: #050505;
-  padding: 10px 100px 20px 50px;
+  padding: 1% 1% 1% 7%;
 }
 
 .title {
