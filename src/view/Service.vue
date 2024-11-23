@@ -25,7 +25,10 @@
 
     <!-- 响应式背景图 -->
     <div class="hero-image"></div>
-
+    <!-- PublicWelfareSector 组件 -->
+     <div class="content">
+      <PublicWelfareSector />
+    </div>
     <!-- DreamChaseProject 组件 -->
     <div class="content">
       <DreamChaseProject />
@@ -72,6 +75,7 @@ import DreamChaseProject from './DreamchaseProject.vue';
 import CoreMembers from './CoreMembers.vue'; // 调整路径以适应实际项目结构
 import ApplyCooperation from './ApplyCooperation.vue';
 
+import PublicWelfareSector from './PublicWelfareSector.vue';
 onMounted(() => {
   // 初始化逻辑（如动画）
 });
