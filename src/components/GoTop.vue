@@ -34,7 +34,7 @@ function GoTop() {
   display: block;
   width: 100%;
   height: 100%;
-  color: #65A39A;
+  color: rgb(8, 162, 233);
   font-size: 30px;
 }
 </style>
