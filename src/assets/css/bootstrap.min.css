@@ -1407,7 +1407,7 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #65A49B;
+    background-color: #fff
 }
 
 button,
@@ -1992,12 +1992,12 @@ pre code {
     overflow-y: scroll
 }
 
-/* .container {
+.container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto
-} */
+}
 
 @media (min-width:768px) {
     .container {
