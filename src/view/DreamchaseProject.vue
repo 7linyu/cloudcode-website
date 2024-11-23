@@ -45,22 +45,23 @@
 /* 文本样式 */
 .title {
   color: #65a39a;
-  font-weight: 500;
-  font-size: 3.6rem;
+  font-weight: bold;
+  font-size: 4rem;
+  ;
   margin-bottom: 15px;
   max-width: 600px;
 }
 
 .subtitle {
   color: #65a39a;
-  font-size: 1.6rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   max-width: 600px;
 }
 
 .description {
   color: #65a39a;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
   max-width: 600px;
 }
@@ -69,7 +70,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 20px;
+  padding: 5%;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -85,7 +86,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 3px;
   width: 300px;
   height: 300px;
   flex-shrink: 0;
@@ -102,9 +102,10 @@
   justify-content: space-between;
 }
 
-.grid-item img {
-  width: 30px;
-  height: 30px;
+.grid-item img { 
+  /* max-width: 100%; */
+  width: 80px;
+  height: 80px;
   margin-bottom: 5px;
 }
 

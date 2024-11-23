@@ -73,7 +73,7 @@ onMounted(() => {
   font-size: 16px;
   font-weight: bold;
   height: 60px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px #65A49B(0, 0, 0, 0.5);
   flex-wrap: wrap;
 }
 
@@ -92,6 +92,7 @@ onMounted(() => {
   flex-grow: 1;
   text-align: right;
   white-space: nowrap;
+  padding : 1%
 }
 
 /* logo 图片 */
