@@ -1,39 +1,48 @@
 <template>
   <div class="main">
     <div class="text-content">
-      <div class="title">筑梦计划</div>
-      <div class="subtitle">
-        自云萌成立以来，我们一直热衷于帮助<br />
+      <h1>筑梦计划</h1>
+      <h3>
+        自云萌成立以来，我们一直热衷于帮助<br>
         团队内外需要帮助的有志青年
-      </div>
-      <div class="description">
-        累计资助了xx场比赛<br />
-        为1000余名青年提供助学支持<br />
-        自创立以来为学校培养了数百名人才，并提供技术栈方面的教学<br />
+      </h3>
+      <h4>
+        累计资助了xx场比赛<br>
+        为1000余名青年提供助学支持<br>
+        自创立以来为学校培养了数百名人才，并提供技术栈方面的教学<br>
         持续的关注需要帮助的新人，为其保驾护航...
-      </div>
+      </h4>
     </div>
 
+    <!-- 正方形容器 -->
     <div class="square-container">
       <div class="grid-item green g001">
-        <img src="../img/1.png" alt="助学支持" />
+        <img src="../img/1.png" alt="助学支持">
         <p>助学支持</p>
-        <p class="example">例如：为贫困学生提供助学金</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
       </div>
       <div class="grid-item yellow g002">
-        <img src="../img/2.png" alt="竞赛支持" />
+        <img src="../img/2.png" alt="竞赛支持">
         <p>竞赛支持</p>
-        <p class="example">例如：赞助编程大赛</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
       </div>
       <div class="grid-item yellow g003">
-        <img src="../img/3.png" alt="服务评价" />
+        <img src="../img/3.png" alt="服务评价">
         <p>服务评价</p>
-        <p class="example">例如：收集学员反馈提升服务</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
       </div>
       <div class="grid-item green g004">
-        <img src="../img/4.png" alt="覆盖人数" />
+        <img src="../img/4.png" alt="覆盖人数">
         <p>覆盖人数</p>
-        <p class="example">例如：覆盖全国1000+名学生</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaa</p>
       </div>
     </div>
   </div>
@@ -43,42 +52,37 @@
 
 <style scoped>
 /* 文本样式 */
-.title {
-  color: #65a39a;
-  font-weight: bold;
-  font-size: 4rem;
-  ;
-  margin-bottom: 15px;
+h1 {
+  color: #65A39A;
+  margin-bottom: 30px;
   max-width: 600px;
+  font-size: 2.5rem;
 }
 
-.subtitle {
-  color: #65a39a;
-  font-size: 3rem;
-  margin-bottom: 10px;
+h3,
+h4 {
+  color: #65A39A;
+  margin-bottom: 20px;
   max-width: 600px;
+  font-size: 1.5rem;
 }
 
-.description {
-  color: #65a39a;
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-  max-width: 600px;
+h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
 }
 
 .main {
+  margin-left: 2%;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 5%;
-  gap: 10px;
-  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px;
 }
 
 .text-content {
-  /* font-size: 1.6rem; */
+  font-size: 1.5rem;
   flex: 1 1 50%;
-  margin-right: 5px;
+  margin-right: 5%;
 }
 
 /* 正方形容器 */
@@ -86,50 +90,47 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  width: 300px;
-  height: 300px;
-  flex-shrink: 0;
+  gap: 0px;
+  aspect-ratio: 1;
+  max-width: 100%;
 }
 
 /* 每个格子的样式 */
 .grid-item {
   text-align: center;
   background-color: #f0f0f0;
-  padding: 5px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.grid-item img { 
-  /* max-width: 100%; */
-  width: 80px;
-  height: 80px;
-  margin-bottom: 5px;
+.grid-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
 }
 
 .grid-item p {
   margin: 0;
-  color: #ffffff;
-  font-size: 12px;
-  text-align: center;
-}
-
-.example {
-  font-size: 10px;
-  /* color: #777; */
-  margin-top: 2px;
+  color: #333;
+  font-size: 16px;
+  min-height: 2.5em;
+  /* 确保有至少两行文本空间 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 /* 颜色块 */
 .yellow {
-  background-color: #e9b058;
+  background-color: #E9B058;
 }
 
 .green {
-  background-color: #65a39a;
+  background-color: #65A39A;
 }
 
 .g001 {
@@ -150,96 +151,83 @@
 
 /* 响应式设计 */
 @media (max-width: 992px) {
-  .title {
-    font-size: 2.4rem;
+  h1 {
+    font-size: 2rem;
   }
 
-  .subtitle,
-  .description {
-    font-size: 1.4rem;
+  h3,
+  h4 {
+    font-size: 1.2rem;
   }
 
   .square-container {
-    width: 220px;
-    height: 220px;
+    width: 180px;
   }
 
   .grid-item img {
-    width: 28px;
-    height: 28px;
+    width: 50px;
+    height: 50px;
   }
 
   .grid-item p {
-    font-size: 11px;
-  }
-
-  .example {
-    font-size: 9px;
+    font-size: 14px;
+    min-height: 2.5em;
   }
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle,
-  .description {
-    font-size: 1.2rem;
-  }
-
-  .main {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .square-container {
-    width: 160px;
-    height: 160px;
-    margin-top: 10px;
-  }
-
-  .grid-item img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .grid-item p {
-    font-size: 10px;
-  }
-
-  .example {
-    font-size: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
+  h1 {
     font-size: 1.8rem;
   }
 
-  .subtitle,
-  .description {
+  h3,
+  h4 {
     font-size: 1rem;
   }
 
   .square-container {
-    width: 120px;
-    height: 120px;
-    margin-top: 8px;
+    width: 160px;
   }
 
   .grid-item img {
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
   }
 
   .grid-item p {
-    font-size: 9px;
+    font-size: 13px;
+    min-height: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
   }
 
-  .example {
-    font-size: 7px;
+  h3,
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  .text-content,
+  .square-container {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .square-container {
+    width: 120px;
+  }
+
+  .grid-item img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .grid-item p {
+    font-size: 11px;
+    min-height: 2.5em;
   }
 }
 </style>
