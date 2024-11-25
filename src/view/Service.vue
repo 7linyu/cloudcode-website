@@ -4,20 +4,13 @@
     <div class="navbar">
       <img src="../assets/img/logo.png" alt="logo" class="logo">
       <div class="navbar-left">
-        云萌工作室
+        {{ $t('navbar.title') }}
       </div>
-      <!-- <div class="navbar-right">
-        简体中文 / 繁體中文 / English
-      </div> -->
-
-
       <div class="navbar-right">
         <a href="#" @click.prevent="setLanguage('zh-CN')">简体中文</a> /
-        <a href="#" @click.prevent="setLanguage('zh-TW')">繁體中文</a> /
+        <a href="#" @click.prevent="setLanguage('zh-TW')">繁体中文</a> /
         <a href="#" @click.prevent="setLanguage('en')">English</a>
       </div>
-
-
     </div>
 
     <!-- 固定绿色盒子 -->
@@ -25,24 +18,30 @@
 
     <!-- 响应式背景图 -->
     <div class="hero-image"></div>
+
     <!-- PublicWelfareSector 组件 -->
-     <div class="content">
+    <div class="content">
+     
       <PublicWelfareSector />
     </div>
+
     <!-- DreamChaseProject 组件 -->
     <div class="content">
+      
       <DreamChaseProject />
     </div>
 
     <!-- CoreMembers 组件 -->
     <div class="content">
+      
       <CoreMembers />
     </div>
+
     <!-- ApplyCooperation 组件 -->
     <div class="content">
+      
       <ApplyCooperation />
     </div>
-
   </div>
 </template>
 
@@ -51,7 +50,7 @@ import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 // 使用 Vue I18n
-// const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 // 切换语言函数
 const setLanguage = (lang) => {
@@ -69,16 +68,11 @@ onMounted(() => {
   }
 });
 
-// import DreamChaseProject from './DreamChaseProject.vue'; // 确保路径正确
-import DreamChaseProject from './DreamchaseProject.vue';
-
-import CoreMembers from './CoreMembers.vue'; // 调整路径以适应实际项目结构
-import ApplyCooperation from './ApplyCooperation.vue';
-
+// 导入组件
 import PublicWelfareSector from './PublicWelfareSector.vue';
-onMounted(() => {
-  // 初始化逻辑（如动画）
-});
+import DreamChaseProject from './DreamChaseProject.vue';
+import CoreMembers from './CoreMembers.vue';
+import ApplyCooperation from './ApplyCooperation.vue';
 </script>
 
 

@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter } from '@/router'
+import i18n from './i18n';
+
 
 
 /* swiper */
@@ -20,6 +22,6 @@ import App from './App.vue'
 
 const router = createRouter()
 const app = createApp(App)
-
+app.use(i18n);
 app.use(router).mount('#app')
 

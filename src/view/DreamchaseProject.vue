@@ -1,75 +1,70 @@
 <template>
   <div class="main">
     <div class="text-content">
-      <h1>筑梦计划</h1>
+      <h1>{{ $t('dreamChase.title') }}</h1>
+      <br>
       <h3>
-        自云萌成立以来，我们一直热衷于帮助<br>
-        团队内外需要帮助的有志青年
+        {{ $t('dreamChase.subTitlePart1') }}<br>
+        {{ $t('dreamChase.subTitlePart2') }}
       </h3>
+      <br>
       <h4>
-        累计资助了xx场比赛<br>
-        为1000余名青年提供助学支持<br>
-        自创立以来为学校培养了数百名人才，并提供技术栈方面的教学<br>
-        持续的关注需要帮助的新人，为其保驾护航...
+        {{ $t('dreamChase.statsPart1') }}<br>
+        {{ $t('dreamChase.statsPart2') }}<br>
+        {{ $t('dreamChase.statsPart3') }}<br>
+        {{ $t('dreamChase.statsPart4') }}
       </h4>
     </div>
 
     <!-- 正方形容器 -->
     <div class="square-container">
       <div class="grid-item green g001">
-        <img src="../img/1.png" alt="助学支持">
-        <p>助学支持</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
+        <img src="../img/1.png" :alt="$t('dreamChase.altText1')">
+        <p>{{ $t('dreamChase.text1') }}</p>
       </div>
       <div class="grid-item yellow g002">
-        <img src="../img/2.png" alt="竞赛支持">
-        <p>竞赛支持</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
+        <img src="../img/2.png" :alt="$t('dreamChase.altText2')">
+        <p>{{ $t('dreamChase.text2') }}</p>
       </div>
       <div class="grid-item yellow g003">
-        <img src="../img/3.png" alt="服务评价">
-        <p>服务评价</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
+        <img src="../img/3.png" :alt="$t('dreamChase.altText3')">
+        <p>{{ $t('dreamChase.text3') }}</p>
       </div>
       <div class="grid-item green g004">
-        <img src="../img/4.png" alt="覆盖人数">
-        <p>覆盖人数</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaa</p>
+        <img src="../img/4.png" :alt="$t('dreamChase.altText4')">
+        <p>{{ $t('dreamChase.text4') }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup name="DreamChaseProject"></script>
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+// 使用 Vue I18n
+const { t } = useI18n();
+</script>
 
 <style scoped>
 /* 文本样式 */
-h1 {
-  color: #65A39A;
-  margin-bottom: 30px;
-  max-width: 600px;
-  font-size: 2.5rem;
+body {
+  font-family: 'Microsoft YaHei', sans-serif; /* 使用微软雅黑字体 */
 }
 
-h3,
-h4 {
-  color: #65A39A;
-  margin-bottom: 20px;
-  max-width: 600px;
-  font-size: 1.5rem;
+.text-content h1, .text-content h3, .text-content h4 {
+  color: #65A39A; /* 设置标题的颜色 */
 }
 
-h4 {
-  margin-bottom: 0;
-  font-size: 1.2rem;
+.text-content h1 {
+  font-size: 50px; /* 设置一级标题的大小 */
+}
+
+.text-content h3 {
+  font-size: 40px; /* 设置三级标题的大小 */
+}
+
+.text-content h4 {
+  font-size: 20px; /* 设置四级标题的大小 */
 }
 
 .main {
@@ -88,40 +83,42 @@ h4 {
 /* 正方形容器 */
 .square-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 增加每个格子的最小宽度 */
   grid-template-rows: 1fr 1fr;
-  gap: 0px;
+  gap: 20px; /* 增加间距 */
   aspect-ratio: 1;
-  max-width: 100%;
+  max-width: 700px; /* 调整最大宽度 */
+  margin: 0 auto; /* 居中显示 */
 }
 
 /* 每个格子的样式 */
 .grid-item {
   text-align: center;
   background-color: #f0f0f0;
-  padding: 16px;
+  padding: 24px; /* 增加内边距 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border-radius: 5px; /* 统一圆角处理 */
 }
 
 .grid-item img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 12px;
+  width: 80px; /* 增加图片大小 */
+  height: 80px; /* 增加图片大小 */
+  margin-bottom: 16px; /* 增加间距 */
 }
 
 .grid-item p {
   margin: 0;
   color: #333;
-  font-size: 16px;
-  min-height: 2.5em;
-  /* 确保有至少两行文本空间 */
+  font-size: 18px; /* 增加字体大小 */
+  min-height: 3em; /* 确保有至少三行文本空间 */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transform: translateY(-60px); /* 向上移动10px */
 }
 
 /* 颜色块 */
@@ -131,22 +128,6 @@ h4 {
 
 .green {
   background-color: #65A39A;
-}
-
-.g001 {
-  border-top-left-radius: 5px;
-}
-
-.g002 {
-  border-top-right-radius: 5px;
-}
-
-.g003 {
-  border-bottom-left-radius: 5px;
-}
-
-.g004 {
-  border-bottom-right-radius: 5px;
 }
 
 /* 响应式设计 */

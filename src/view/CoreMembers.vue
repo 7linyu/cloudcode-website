@@ -1,48 +1,56 @@
 <template>
     <div class="core-team-container">
-        <h1 class="title">核心成员</h1>
-        <div class="images-container">
-            <div v-for="(member, index) in coreMembers" :key="index" class="team-member1">
-                <img :src="member.image" class="team-image1" :alt="'图像' + (index + 1)" />
-                <div class="team-member-info1">
-                    <p class="name">{{ member.name }}</p>
-                    <p class="role">{{ member.role }}</p>
-                </div>
-            </div>
+      <h1 class="title">{{ $t('coreTeam.title') }}</h1>
+      <div class="images-container">
+        <div v-for="(member, index) in coreMembers" :key="index" class="team-member1">
+          <img :src="member.image" class="team-image1" :alt="$t('coreTeam.altText', { index: index + 1 })" />
+          <div class="team-member-info1">
+            <p class="name">{{ member.name }}</p>
+            <p class="role">{{ member.role }}</p>
+          </div>
         </div>
-        <h1 class="title">合作实验室</h1>
-        <div class="images-container">
-            <div v-for="(lab, index) in labs" :key="index" class="team-member2">
-                <img :src="lab.image" class="team-image2" :alt="'图像' + (index + 1)" />
-                <div class="team-member-info2">
-                    <p class="name">{{ lab.name }}</p>
-                    <p class="role">{{ lab.description }}</p>
-                </div>
-            </div>
+      </div>
+      <h1 class="title">{{ $t('coreTeam.labTitle') }}</h1>
+      <div class="images-container">
+        <div v-for="(lab, index) in labs" :key="index" class="team-member2">
+          <img :src="lab.image" class="team-image2" :alt="$t('coreTeam.altText', { index: index + 1 })" />
+          <div class="team-member-info2">
+            <p class="name">{{ lab.name }}</p>
+            <p class="role">{{ lab.description }}</p>
+          </div>
         </div>
+      </div>
     </div>
-    
-</template>
-
-<script>
-export default {
+  </template>
+  
+  <script>
+  import { useI18n } from 'vue-i18n';
+  
+  export default {
     name: "CoreTeam",
-    data() {
-        return {
-            coreMembers: [
-                { image: "src/assets/img/人物1.jpg", name: "张三", role: "首席技术官" },
-                { image: "src/assets/img/人物1.jpg", name: "李四", role: "产品经理" },
-                { image: "src/assets/img/人物1.jpg", name: "王五", role: "设计师" }
-            ],
-            labs: [
-                { image: "src/assets/img/网络工程系.jpg", name: "实验室A", description: "专注于人工智能研究" },
-                { image: "src/assets/img/网络工程系.jpg", name: "实验室B", description: "专注于大数据分析" },
-                { image: "src/assets/img/网络工程系.jpg", name: "实验室C", description: "专注于云计算技术" }
-            ]
-        };
+    setup() {
+      const { t } = useI18n();
+  
+      const coreMembers = [
+        { image: "src/assets/img/人物1.jpg", name: t('coreTeam.members[0].name'), role: t('coreTeam.members[0].role') },
+        { image: "src/assets/img/人物1.jpg", name: t('coreTeam.members[1].name'), role: t('coreTeam.members[1].role') },
+        { image: "src/assets/img/人物1.jpg", name: t('coreTeam.members[2].name'), role: t('coreTeam.members[2].role') }
+      ];
+  
+      const labs = [
+        { image: "src/assets/img/网络工程系.jpg", name: t('coreTeam.labs[0].name'), description: t('coreTeam.labs[0].description') },
+        { image: "src/assets/img/网络工程系.jpg", name: t('coreTeam.labs[1].name'), description: t('coreTeam.labs[1].description') },
+        { image: "src/assets/img/网络工程系.jpg", name: t('coreTeam.labs[2].name'), description: t('coreTeam.labs[2].description') }
+      ];
+  
+      return {
+        coreMembers,
+        labs
+      };
     }
-};
-</script>
+  };
+  </script>
+  
 
 <style scoped>
 .core-team-container {

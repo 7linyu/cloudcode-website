@@ -1,20 +1,18 @@
 <template>
   <div id="footer" class="container-fluid">
-    <p class="title">云萌工作室</p>
-    <p>地址：四川省成都市都江堰市青城山镇长寿社区3栋1层1号</p>
-    <p>邮箱：<a href="mailto:support@cloudcode.team">support@cloudcode.team</a></p>
-    <p>友情链接：<a href="https://geek.cloudcode.team" target="_blank">云萌极客站</a> | <a href="https://learn.cloudcode.team"
-        target="_blank">网工教学平台</a></p>
-    <p class="icp">
-      © 2022-2023 CloudCode Team. All Rights Reserved |
-      <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022018075号-2</a> |
-      <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51018102000210" target="_blank">川公网安备
-        51018102000210号</a>
-    </p>
+    <p class="title">{{ $t('footer.title') }}</p>
+    <p v-html="$t('footer.address')"></p>
+    <p v-html="$t('footer.email')"></p>
+    <p v-html="$t('footer.links')"></p>
+    <p class="icp" v-html="$t('footer.icp')"></p>
   </div>
 </template>
 
-<script setup name="Footer">
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+// 使用 Vue I18n
+const { t } = useI18n();
 </script>
 
 <style scoped>

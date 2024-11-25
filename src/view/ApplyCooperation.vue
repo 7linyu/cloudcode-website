@@ -1,18 +1,23 @@
 <template>
   <div class="main">
-    <h1>申请合作</h1>
+    <h1>{{ $t('applyCooperation.title') }}</h1>
     <h4>
-        云萌工作室，一个深植于科技创新士壤中的璀璨明珠，致力于成为青年学子探索技术世界的灯塔。
+      {{ $t('applyCooperation.description') }}
     </h4>
     <h4 style="color: #E0B266; font-weight: bold;">
-        用技术改变世界，用智慧点亮未来！
+      {{ $t('applyCooperation.slogan') }}
     </h4>
   </div>
 </template>
 
 <script setup>
-import {} from "vue"
-name = "ApplyCooperation"
+import { useI18n } from 'vue-i18n';
+
+// 使用 Vue I18n
+const { t } = useI18n();
+
+// 定义组件名称
+const name = "ApplyCooperation";
 </script>
 
 <style scoped>
@@ -23,6 +28,7 @@ h1 {
     width: 500px;
     margin-bottom: 30px;
     font-weight: bold;
+    font-size: 50px; 
 }
 h4 {
   color: #65A39A;

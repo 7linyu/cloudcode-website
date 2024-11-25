@@ -1,38 +1,60 @@
 <template>
   <div class="main">
-    <div class="title">云萌公益</div>
+    <div class="title">{{ $t('publicWelfare.title') }}</div>
     <div class="content-container">
-      <img src="../img/6.png" alt="云萌公益" class="align-left">
+      <img src="../img/8.jpeg" alt="云萌公益" class="align-left">
       <div class="text-content">
         <div class="subtitle">
-          <strong>我们是一只热爱服务的团队，致力于为社区提供帮助</strong>
+          <strong>{{ $t('publicWelfare.subtitle') }}</strong>
         </div>
       </div>
     </div>
     <div class="images-container">
-      <div v-for="(member, index) in coreMembers" :key="index" class="team-member1">
-        <img :src="member.image"  class="team-image1" :alt="'图像' + (index + 1)" />
+      <div>
+        <img src="src/assets/img/图1.png" style="border-radius: 10px" />
+      </div>
+      <div>
+        <img src="src/assets/img/图1.png" style="border-radius: 10px" />
+      </div>
+      <div>
+        <img src="src/assets/img/图1.png" style="border-radius: 10px" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup name="PublicWelfareSector"></script>
-<script>
-export default {
-    name: "CoreTeam",
-    data() {
-        return {
-            coreMembers: [
-                { image: "src/assets/img/图1.png" },
-                { image: "src/assets/img/图1.png"},
-                { image: "src/assets/img/图1.png"}
-            ],
-        };
-    }
-};
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+// 使用 Vue I18n
+const { t } = useI18n();
 </script>
 <style scoped>
+
+img{
+  height: auto;
+  width: 100%;
+}
+.images-container img {
+            opacity: 0.5; /* 设置图像为半透明 */
+            border-radius: 10px;
+        }
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #65A39A;
+}
+.team-member-info {
+
+}
 .team-member1 {
     display: flex;
     flex-direction: column;
@@ -59,7 +81,7 @@ export default {
 .images-container {
   padding: 20px;
   display: grid;
-  background-image: url("../img/7.png");
+  background-image: url("../img/9.jpg");
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   width: 100%;
