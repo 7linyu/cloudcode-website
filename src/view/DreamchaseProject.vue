@@ -1,38 +1,28 @@
 <template>
   <div class="main">
+    <!-- 文本内容 -->
     <div class="text-content">
       <h1>{{ $t('dreamChase.title') }}</h1>
-      <br>
+      <br />
       <h3>
-        {{ $t('dreamChase.subTitlePart1') }}<br>
+        {{ $t('dreamChase.subTitlePart1') }}<br />
         {{ $t('dreamChase.subTitlePart2') }}
       </h3>
-      <br>
+      <br />
       <h4>
-        {{ $t('dreamChase.statsPart1') }}<br>
-        {{ $t('dreamChase.statsPart2') }}<br>
-        {{ $t('dreamChase.statsPart3') }}<br>
+        {{ $t('dreamChase.statsPart1') }}<br />
+        {{ $t('dreamChase.statsPart2') }}<br />
+        {{ $t('dreamChase.statsPart3') }}<br />
         {{ $t('dreamChase.statsPart4') }}
       </h4>
     </div>
 
-    <!-- 正方形容器 -->
+    <!-- 四个正方形的小图形 -->
     <div class="square-container">
-      <div class="grid-item green g001">
-        <img src="../img/1.png" :alt="$t('dreamChase.altText1')">
-        <p>{{ $t('dreamChase.text1') }}</p>
-      </div>
-      <div class="grid-item yellow g002">
-        <img src="../img/2.png" :alt="$t('dreamChase.altText2')">
-        <p>{{ $t('dreamChase.text2') }}</p>
-      </div>
-      <div class="grid-item yellow g003">
-        <img src="../img/3.png" :alt="$t('dreamChase.altText3')">
-        <p>{{ $t('dreamChase.text3') }}</p>
-      </div>
-      <div class="grid-item green g004">
-        <img src="../img/4.png" :alt="$t('dreamChase.altText4')">
-        <p>{{ $t('dreamChase.text4') }}</p>
+      <div v-for="(item, index) in gridItems" :key="index" class="grid-item">
+        <img :src="item.imgSrc" :alt="item.altText" />
+        <p>{{ item.title }}</p>
+        <p>{{ item.description }}</p>
       </div>
     </div>
   </div>
@@ -43,106 +33,119 @@ import { useI18n } from 'vue-i18n';
 
 // 使用 Vue I18n
 const { t } = useI18n();
+
+// 图片和文字内容
+const gridItems = [
+  {
+    imgSrc: "./img/1.png",
+    altText: "Image 1",
+    title: "Title 1",
+    description: "Description 1",
+  },
+  {
+    imgSrc: "../img/2.png",
+    altText: "Image 2",
+    title: "Title 2",
+    description: "Description 2",
+  },
+  {
+    imgSrc: "../img/3.png",
+    altText: "Image 3",
+    title: "Title 3",
+    description: "Description 3",
+  },
+  {
+    imgSrc: "../img/4.png",
+    altText: "Image 4",
+    title: "Title 4",
+    description: "Description 4",
+  },
+];
 </script>
 
 <style scoped>
-/* 文本样式 */
-body {
-  font-family: 'Microsoft YaHei', sans-serif; /* 使用微软雅黑字体 */
+/* 主容器 */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.text-content h1, .text-content h3, .text-content h4 {
-  color: #65A39A; /* 设置标题的颜色 */
+/* 文本内容 */
+.text-content {
+  flex: 1 1 50%;
+  max-width: 600px;
+  margin-right: 20px;
 }
 
 .text-content h1 {
-  font-size: 50px; /* 设置一级标题的大小 */
+  font-size: 2.5rem;
 }
 
 .text-content h3 {
-  font-size: 40px; /* 设置三级标题的大小 */
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
 .text-content h4 {
-  font-size: 20px; /* 设置四级标题的大小 */
-}
-
-.main {
-  margin-left: 2%;
-  display: flex;
-  width: 100%;
-  padding: 50px;
-}
-
-.text-content {
-  font-size: 1.5rem;
-  flex: 1 1 50%;
-  margin-right: 5%;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
 }
 
 /* 正方形容器 */
 .square-container {
+  flex: 1 1 40%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 增加每个格子的最小宽度 */
-  grid-template-rows: 1fr 1fr;
-  gap: 20px; /* 增加间距 */
-  aspect-ratio: 1;
-  max-width: 700px; /* 调整最大宽度 */
-  margin: 0 auto; /* 居中显示 */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 300px;
+  margin: auto;
+  
 }
 
-/* 每个格子的样式 */
+/* 小正方形样式 */
 .grid-item {
-  text-align: center;
-  background-color: #f0f0f0;
-  padding: 24px; /* 增加内边距 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 5px; /* 统一圆角处理 */
+  justify-content: flex-start;
+  background-color: #32d7b1;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .grid-item img {
-  width: 80px; /* 增加图片大小 */
-  height: 80px; /* 增加图片大小 */
-  margin-bottom: 16px; /* 增加间距 */
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 .grid-item p {
-  margin: 0;
+  margin: 5px 0;
+  font-size: 14px;
   color: #333;
-  font-size: 18px; /* 增加字体大小 */
-  min-height: 3em; /* 确保有至少三行文本空间 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform: translateY(-60px); /* 向上移动10px */
-}
-
-/* 颜色块 */
-.yellow {
-  background-color: #E9B058;
-}
-
-.green {
-  background-color: #65A39A;
+  line-height: 1.4;
 }
 
 /* 响应式设计 */
-@media (max-width: 992px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h3,
-  h4 {
-    font-size: 1.2rem;
+@media (max-width: 768px) {
+  .text-content {
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .square-container {
-    width: 180px;
+    flex: 1 1 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .grid-item img {
@@ -151,64 +154,17 @@ body {
   }
 
   .grid-item p {
-    font-size: 14px;
-    min-height: 2.5em;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h3,
-  h4 {
-    font-size: 1rem;
-  }
-
-  .square-container {
-    width: 160px;
-  }
-
-  .grid-item img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .grid-item p {
-    font-size: 13px;
-    min-height: 2.5em;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h3,
-  h4 {
-    font-size: 0.9rem;
-  }
-
-  .text-content,
   .square-container {
-    flex: 1 1 100%;
-    margin: 0;
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .square-container {
-    width: 120px;
-  }
-
-  .grid-item img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .grid-item p {
-    font-size: 11px;
-    min-height: 2.5em;
+  .grid-item {
+    padding: 10px;
   }
 }
 </style>
