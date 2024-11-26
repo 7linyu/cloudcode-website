@@ -2,7 +2,7 @@
   <div class="background">
     <!-- 导航栏 -->
     <div class="navbar">
-      <img src="../assets/img/logo.png" alt="logo" class="logo">
+      <img src="src\img\logo.png" alt="logo" class="logo">
       <div class="navbar-left">
         {{ $t('navbar.title') }}
       </div>
@@ -21,25 +21,25 @@
 
     <!-- PublicWelfareSector 组件 -->
     <div class="content">
-     
+
       <PublicWelfareSector />
     </div>
 
     <!-- DreamChaseProject 组件 -->
     <div class="content">
-      
+
       <DreamChaseProject />
     </div>
 
     <!-- CoreMembers 组件 -->
     <div class="content">
-      
+
       <CoreMembers />
     </div>
 
     <!-- ApplyCooperation 组件 -->
     <div class="content">
-      
+
       <ApplyCooperation />
     </div>
   </div>
@@ -231,7 +231,7 @@ import ApplyCooperation from './ApplyCooperation.vue';
 /* 响应式背景图 */
 .hero-image {
   width: 100%;
-  background-image: url("../assets/img/cloud.jpg");
+  background-image: url("src/img/cloud.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

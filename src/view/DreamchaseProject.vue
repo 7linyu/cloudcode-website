@@ -37,25 +37,25 @@ const { t } = useI18n();
 // 图片和文字内容
 const gridItems = [
   {
-    imgSrc: "./img/1.png",
+    imgSrc: "src/img/1.png",
     altText: "Image 1",
     title: "Title 1",
     description: "Description 1",
   },
   {
-    imgSrc: "../img/2.png",
+    imgSrc: "src/img/2.png",
     altText: "Image 2",
     title: "Title 2",
     description: "Description 2",
   },
   {
-    imgSrc: "../img/3.png",
+    imgSrc: "src/img/3.png",
     altText: "Image 3",
     title: "Title 3",
     description: "Description 3",
   },
   {
-    imgSrc: "../img/4.png",
+    imgSrc: "src/img/4.png",
     altText: "Image 4",
     title: "Title 4",
     description: "Description 4",
