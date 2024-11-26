@@ -32,15 +32,15 @@ export default {
     const { t } = useI18n();
 
     const coreMembers = [
-      { image: "src/assets/img/人物1.jpg" },
-      { image: "src/assets/img/人物1.jpg" },
-      { image: "src/assets/img/人物1.jpg" }
+      { image: "src/assets/img/people.jpg" },
+      { image: "src/assets/img/people.jpg" },
+      { image: "src/assets/img/people.jpg" }
     ];
 
     const labs = [
-      { image: "src/assets/img/网络工程系.jpg" },
-      { image: "src/assets/img/网络工程系.jpg" },
-      { image: "src/assets/img/网络工程系.jpg" }
+      { image: "src/assets/img/001.jpg" },
+      { image: "src/assets/img/001.jpg" },
+      { image: "src/assets/img/001.jpg" }
     ];
 
     return {

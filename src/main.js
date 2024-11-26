@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createRouter } from '@/router'
 import i18n from './i18n';
+import './assets/css/bootstrap.min.css';
+import './assets/js/bootstrap.min.js';
 
 
 

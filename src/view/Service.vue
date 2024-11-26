@@ -41,6 +41,7 @@
     <div class="content">
       
       <ApplyCooperation />
+
     </div>
   </div>
 </template>

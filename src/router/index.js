@@ -18,6 +18,7 @@ const routes = [
   {
     path: '/',
     name: 'PageView',
+    mode: 'hash',
     redirect: '/service',
     component: () => import('@/view/PageView.vue'),
     children: [
