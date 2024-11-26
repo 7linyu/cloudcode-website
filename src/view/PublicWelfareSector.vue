@@ -11,13 +11,13 @@
     </div>
     <div class="images-container">
       <div>
-        <img src="src/assets/img/图1.png" style="border-radius: 10px" />
+        <img src="../img/with01.png" style="border-radius: 10px" />
       </div>
       <div>
-        <img src="src/assets/img/图1.png" style="border-radius: 10px" />
+        <img src="../img/with01.png" style="border-radius: 10px" />
       </div>
       <div>
-        <img src="src/assets/img/图1.png" style="border-radius: 10px" />
+        <img src="../img/with01.png" style="border-radius: 10px" />
       </div>
     </div>
   </div>
@@ -51,9 +51,6 @@ img{
     font-weight: bold;
     margin-bottom: 5px;
     color: #65A39A;
-}
-.team-member-info {
-
 }
 .team-member1 {
     display: flex;
