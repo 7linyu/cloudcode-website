@@ -32,9 +32,9 @@ export default {
     const { t } = useI18n();
 
     const coreMembers = [
-      { image: "src/img/people.jpg" },
-      { image: "src/img/people.jpg" },
-      { image: "src/img/people.jpg" }
+      { image: "src/img/people1.jpg" },
+      { image: "src/img/people1.jpg" },
+      { image: "src/img/people1.jpg" }
     ];
 
     const labs = [

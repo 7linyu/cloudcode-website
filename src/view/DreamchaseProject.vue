@@ -21,8 +21,8 @@
     <div class="square-container">
       <div v-for="(item, index) in gridItems" :key="index" :class="['grid-item', `grid-item-${index + 1}`]">
         <img :src="item.imgSrc" :alt="item.altText" />
-        <p>{{ item.title }}</p>
-        <p>{{ item.description }}</p>
+        <p>{{ $t(item.title) }}</p>
+        <p>{{ $t(item.description) }}</p>
       </div>
     </div>
   </div>
@@ -39,26 +39,26 @@ const gridItems = [
   {
     imgSrc: "src/img/1.png",
     altText: "Image 1",
-    title: "助力支持",
-    description: "累计支持 1000 人次",
+    title: 'dreamChase.text1',
+    description: 'dreamChase.statsPart2'
   },
   {
     imgSrc: "src/img/2.png",
     altText: "Image 2",
-    title: "竞赛支持",
-    description: "累计参加 50 场比赛",
+    title: 'dreamChase.text2',
+    description: 'dreamChase.statsPart1'
   },
   {
     imgSrc: "src/img/3.png",
     altText: "Image 3",
-    title: "服务评价",
-    description: "累计获得 100 家企业的好评",
+    title: 'dreamChase.text3',
+    description: 'dreamChase.statsPart3'
   },
   {
     imgSrc: "src/img/4.png",
     altText: "Image 4",
-    title: "覆盖人群",
-    description: "累计覆盖 1000 人",
+    title: 'dreamChase.text4',
+    description: 'dreamChase.statsPart4'
   },
 ];
 </script>

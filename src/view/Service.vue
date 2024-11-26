@@ -16,32 +16,37 @@
     <!-- 固定绿色盒子 -->
     <div class="green-box"></div>
 
-    <!-- 响应式背景图 -->
-    <div class="hero-image"></div>
+    <!-- 轮播图 -->
+    <div class="carousel-container">
+      <transition-group name="fade" tag="div">
+        <div v-for="(item, index) in items" :key="index" v-show="currentSlide === index" class="carousel-slide">
+          <img v-if="item.type === 'image'" :src="item.src" alt="slide image" class="carousel-image" />
+          <video v-else autoplay loop muted playsinline class="carousel-video">
+            <source :src="item.src" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </transition-group>
+    </div>
 
     <!-- PublicWelfareSector 组件 -->
     <div class="content">
-     
       <PublicWelfareSector />
     </div>
 
     <!-- DreamChaseProject 组件 -->
     <div class="content">
-      
       <DreamChaseProject />
     </div>
 
     <!-- CoreMembers 组件 -->
     <div class="content">
-      
       <CoreMembers />
     </div>
 
     <!-- ApplyCooperation 组件 -->
     <div class="content">
-      
       <ApplyCooperation />
-
     </div>
   </div>
 </template>
@@ -69,13 +74,54 @@ onMounted(() => {
   }
 });
 
+// 轮播图数据
+const items = [
+  // { type: 'image', src: 'src/img/cloud.jpg' },
+  // { type: 'image', src: 'src/img/9.png' },
+  // { type: 'image', src: 'src/img/8.jpeg' },
+  { type: 'video', src: 'src/img/mv.mp4' }
+];
+
+// 当前幻灯片索引
+const currentSlide = ref(0);
+
+// 视频播放器引用
+const videoPlayer = ref(null);
+
+// 控制是否自动切换
+let autoSwitchEnabled = true;
+
+// 处理视频结束事件
+const handleVideoEnded = () => {
+  if (autoSwitchEnabled) {
+    nextSlide();
+  }
+};
+
+// 下一张幻灯片
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % items.length;
+};
+
+// 自动切换幻灯片
+const startCarousel = () => {
+  setInterval(() => {
+    if (items[currentSlide.value].type !== 'video' && autoSwitchEnabled) {
+      nextSlide();
+    }
+  }, 3000); // 每隔3秒切换一次
+};
+
+// 启动轮播
+onMounted(startCarousel);
+
+
 // 导入组件
 import PublicWelfareSector from './PublicWelfareSector.vue';
 import DreamChaseProject from './DreamChaseProject.vue';
 import CoreMembers from './CoreMembers.vue';
 import ApplyCooperation from './ApplyCooperation.vue';
 </script>
-
 
 <style scoped>
 /* 背景容器 */
@@ -99,7 +145,7 @@ import ApplyCooperation from './ApplyCooperation.vue';
   font-size: 16px;
   font-weight: bold;
   height: 60px;
-  box-shadow: 0px 2px 4px #65A49B(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
 
@@ -120,7 +166,6 @@ import ApplyCooperation from './ApplyCooperation.vue';
   flex-grow: 1;
   text-align: right;
   white-space: nowrap;
-
 }
 
 .navbar-right a {
@@ -129,15 +174,11 @@ import ApplyCooperation from './ApplyCooperation.vue';
   margin: 0 5px;
   cursor: pointer;
   transition: color 0.3s ease;
-  /* 添加平滑过渡效果 */
 }
 
 .navbar-right a:hover {
   color: rgb(233, 171, 80);
-  /* 鼠标悬停时的颜色 */
-  /* text-decoration: underline; */
   font-weight: bold;
-  /* 加粗 */
   text-decoration: underline;
 }
 
@@ -145,9 +186,7 @@ import ApplyCooperation from './ApplyCooperation.vue';
   font-weight: bold;
   text-decoration: underline;
   color: rgb(233, 171, 80);
-  /* 激活状态的颜色 */
 }
-
 
 /* logo 图片 */
 .logo {
@@ -169,102 +208,41 @@ import ApplyCooperation from './ApplyCooperation.vue';
   z-index: 1000;
 }
 
-
-/* 响应式背景图 */
-/* 背景容器 */
-.background {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
+/* 轮播图容器 */
+.carousel-container {
   width: 100%;
-  background-color: #f8f9fa;
-}
-
-/* 导航栏样式 */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  /* 减少间距 */
-  background-color: #ffffff;
-  color: #65A49B;
-  font-size: 16px;
-  font-weight: bold;
-  height: 60px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-left {
-  font-size: 16px;
-  /* 手机端字体稍微缩小 */
-  color: #65A49B;
-  text-align: left;
-}
-
-.navbar-right {
-  font-size: 14px;
-  color: #65A49B;
-  text-align: right;
-}
-
-/* logo 图片 */
-.logo {
-  max-width: 40px;
-  /* 减少尺寸以适应小屏幕 */
-  max-height: 40px;
-  margin-right: 10px;
-}
-
-/* 绿色盒子 */
-.green-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 8px;
-  /* 减小高度 */
-  background-color: #65A49B;
-  z-index: 1000;
-}
-
-/* 响应式背景图 */
-.hero-image {
-  width: 100%;
-  background-image: url("../img/cloud.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
   aspect-ratio: 16 / 9;
-  /* 维持宽高比例 */
-  min-height: 300px;
-  /* 手机端最小高度 */
 }
 
-@media (max-width: 768px) {
-  .hero-image {
-    aspect-ratio: 4 / 3;
-    min-height: 250px;
-    /* 适应更小屏幕 */
-  }
+/* 幻灯片样式 */
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-@media (max-width: 576px) {
-  .hero-image {
-    aspect-ratio: 1 / 1;
-    min-height: 200px;
-  }
+/* 图片样式 */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 视频样式 */
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 内容区域 */
 .content {
   flex: 1;
   padding: 15px;
-  /* 减少间距 */
   margin-top: 15px;
   background-color: #ffffff;
-  /* box-shadow: 0px 2px 4px rgba(15, 189, 128, 0.046); */
   border-radius: 8px;
 }
 
@@ -272,31 +250,34 @@ import ApplyCooperation from './ApplyCooperation.vue';
 @media (max-width: 576px) {
   .content {
     padding: 10px;
-    /* 更紧凑的内容排布 */
     margin-top: 10px;
   }
 
   .navbar {
     font-size: 14px;
-    /* 导航栏字体更小 */
     padding: 8px 10px;
   }
 
   .navbar-left,
   .navbar-right {
     font-size: 12px;
-    /* 字体适配手机端 */
+  }
+
+  .carousel-container {
+    aspect-ratio: 4 / 3;
   }
 }
 
-
-/* 内容区域
-.content {
-  flex: 1;
-  padding: 20px;
-  margin-top: 20px;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-} */
+/* 过渡效果 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
+
+
+
