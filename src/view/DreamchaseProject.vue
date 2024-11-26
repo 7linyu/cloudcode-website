@@ -19,7 +19,7 @@
 
     <!-- 四个正方形的小图形 -->
     <div class="square-container">
-      <div v-for="(item, index) in gridItems" :key="index" class="grid-item">
+      <div v-for="(item, index) in gridItems" :key="index" :class="['grid-item', `grid-item-${index + 1}`]">
         <img :src="item.imgSrc" :alt="item.altText" />
         <p>{{ item.title }}</p>
         <p>{{ item.description }}</p>
@@ -39,26 +39,26 @@ const gridItems = [
   {
     imgSrc: "src/img/1.png",
     altText: "Image 1",
-    title: "Title 1",
-    description: "Description 1",
+    title: "助力支持",
+    description: "累计支持 1000 人次",
   },
   {
     imgSrc: "src/img/2.png",
     altText: "Image 2",
-    title: "Title 2",
-    description: "Description 2",
+    title: "竞赛支持",
+    description: "累计参加 50 场比赛",
   },
   {
     imgSrc: "src/img/3.png",
     altText: "Image 3",
-    title: "Title 3",
-    description: "Description 3",
+    title: "服务评价",
+    description: "累计获得 100 家企业的好评",
   },
   {
     imgSrc: "src/img/4.png",
     altText: "Image 4",
-    title: "Title 4",
-    description: "Description 4",
+    title: "覆盖人群",
+    description: "累计覆盖 1000 人",
   },
 ];
 </script>
@@ -78,22 +78,25 @@ const gridItems = [
 .text-content {
   flex: 1 1 50%;
   max-width: 600px;
-  margin-right: 20px;
+  margin-left: 5%;
 }
 
 .text-content h1 {
-  font-size: 2.5rem;
+  color: #65A39A;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .text-content h3 {
-  font-size: 2rem;
-  margin-top: 20px;
+  font-size: 20px;
+  color: #65A39A;
+  /* margin-top: 20px; */
 }
 
 .text-content h4 {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 20px;
+  color: #65A39A;
+  font-size: 15px;
+  /* margin-top: 20px; */
 }
 
 /* 正方形容器 */
@@ -101,23 +104,21 @@ const gridItems = [
   flex: 1 1 40%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
   max-width: 300px;
-  margin: auto;
-  
+  margin-right: 14%;
+  /* border-radius: 5px; */
 }
 
-/* 小正方形样式 */
+/* 通用小正方形样式 */
 .grid-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #32d7b1;
-  border-radius: 8px;
+  background-color: rgb(107, 212, 179);
+  /* border-radius: 8px; */
   padding: 16px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .grid-item img {
@@ -129,8 +130,29 @@ const gridItems = [
 .grid-item p {
   margin: 5px 0;
   font-size: 14px;
-  color: #333;
+  color: #ffffff;
   line-height: 1.4;
+}
+
+/* 单独小正方体样式 */
+.grid-item-1 {
+  background-color: #65A39A;
+  border-top-left-radius: 5px;
+}
+
+.grid-item-2 {
+  background-color: #E9AB50;
+  border-top-right-radius: 5px
+}
+
+.grid-item-3 {
+  background-color: #E9AB50;
+  border-bottom-left-radius: 5px;
+}
+
+.grid-item-4 {
+  background-color: #65A39A;
+  border-bottom-right-radius: 5px;
 }
 
 /* 响应式设计 */

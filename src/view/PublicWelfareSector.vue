@@ -92,7 +92,7 @@ img{
 /* 文本样式 */
 .title {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 50px;
   margin-bottom: 20px;
   color: #65A39A;
   text-align: center; /* 使标题居中 */
