@@ -1,50 +1,57 @@
 <template>
-    <footer class="footer">
-        <div class="container">
-            <h3>云萌工作室</h3>
-            <p>
-                地址：四川省成都市郫都区犀浦镇珠江镇兴大社区第1组1号
-            </p>
-            <p>
-                邮箱：<a href="mailto:support@cloudcode.team">support@cloudcode.team</a>
-            </p>
-            <p>友情链接：云萌实验站</p>
-            <p>蜀ICP备2022010875号-2</p>
-        </div>
-    </footer>
+    <div id="footer" class="container-fluid">
+        <p class="title">{{ $t('footer.title') }}</p>
+        <p v-html="$t('footer.address')"></p>
+        <p v-html="$t('footer.email')"></p>
+        <p v-html="$t('footer.links')"></p>
+        <p class="icp" v-html="$t('footer.icp')"></p>
+    </div>
 </template>
 
-<script>
-export default {
-    name: "Footer",
-};
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+// 使用 Vue I18n
+const { t } = useI18n();
 </script>
 
 <style scoped>
-.footer {
-    background-color: #000;
-    /* 黑色背景 */
+#footer {
+    width: 100%;
+    height: auto;
     color: #fff;
-    /* 白色字体 */
-    text-align: left;
-    padding: 5%;
+    background: #050505;
+    padding: 1% 1% 1% 7%;
 }
 
-.footer a {
-    color: #ffa500;
-    /* 亮橙色超链接 */
+.title {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+p {
+    color: #d3d3d3;
+    font-size: 12px;
+    margin: 5px;
+    text-align: left;
+}
+
+a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.footer a:hover {
+a:hover {
+    color: #65A39A;
     text-decoration: underline;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 14px;
-    /* 调整字体大小 */
-    line-height: 1.6;
+.icp {
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: left;
+    color: #d3d3d3;
 }
 </style>
