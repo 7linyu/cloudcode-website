@@ -1,23 +1,26 @@
 <template>
   <div class="main">
-    <div class="title">{{ $t('publicWelfare.title') }}</div>
+    <!-- 第一部分：公共福利部分 -->
+    <div class="title1">{{ $t('publicWelfare.title') }}</div>
     <div class="content-container">
       <img src="../img/8.jpeg" alt="云萌公益" class="align-left">
       <div class="text-content">
         <div class="subtitle">
           <strong>{{ $t('publicWelfare.subtitle') }}</strong>
         </div>
+        <!-- 这里保留第一部分的内容 -->
       </div>
     </div>
-    <div class="images-container">
-      <div>
-        <img src="../img/with01.png" style="border-radius: 10px" />
+
+    <!-- 第二部分：新闻报道部分 -->
+    <div class="news-report">
+      <div class="image-container">
+        <img :src="imageUrl" alt="Image Description">
       </div>
-      <div>
-        <img src="../img/with01.png" style="border-radius: 10px" />
-      </div>
-      <div>
-        <img src="../img/with01.png" style="border-radius: 10px" />
+      <div class="text-container">
+        <h2 class="section-title">新闻报道</h2>
+        <h1 class="title2">{{ title }}</h1>
+        <p class="content">{{ content }}</p>
       </div>
     </div>
   </div>
@@ -26,95 +29,32 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 
-// 使用 Vue I18n
 const { t } = useI18n();
-</script>
-<style scoped>
 
-img{
+// 第二部分的内容
+const imageUrl = 'src/img/9.jpg';
+const title = '成都东软学院公益项目在澳上线，代表团出席发布会并开展访企拓岗专项调研';
+const content = '9月26日，成都东软学院与澳门初创智库协会携手打造的免费线上编程学习平台——Mcode公益项目在澳门成功上线。成都东软学院副校长张兵、计算机与软件学院副院长赵荷、云萌工作室指导教师袁睿及项目组成员代表出席会议。';
+</script>
+
+<style scoped>
+/* 公共样式 */
+img {
   height: auto;
   width: 100%;
 }
-.images-container img {
-            opacity: 0.5; /* 设置图像为半透明 */
-            border-radius: 10px;
-        }
 
-.team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.name {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #65A39A;
-}
-.team-member1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.name {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #65A39A;
-}
-.team-member-info1 {
-    margin-top: auto; /* 将名字显示在图片的中下部 */
-}
-.team-image1 {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #65A39A;
-}
-
-.images-container {
-  padding: 20px;
-  display: grid;
-  background-image: url("../img/9.jpg") ;
-  background-size: cover;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  width: 100%;
-  max-width: 100%;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 90%); /* 添加这一行 */
-  background-blend-mode: multiply;
-}
-
-
-/* 文本样式 */
-.title {
+/* 公共福利部分的标题样式 */
+.title1 {
   font-weight: bold;
   font-size: 50px;
   margin-bottom: 20px;
   color: #65A39A;
-  text-align: center; /* 使标题居中 */
+  text-align: center;
+  /* 标题居中 */
 }
 
-.subtitle {
-  color: #65a39a;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  max-width: 600px;
-  padding-left:75px;
-  padding-right:50px;
-}
-
-.description {
-  color: #65a39a;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  max-width: 600px;
-}
-
+/* 公共福利部分的内容容器 */
 .main {
   display: flex;
   flex-direction: column;
@@ -127,9 +67,9 @@ img{
 
 .content-container {
   display: flex;
-  align-items: flex-start; /* 从顶部开始对齐 */
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 20px; /* 调整间距 */
+  gap: 20px;
   width: 100%;
 }
 
@@ -138,121 +78,88 @@ img{
 }
 
 .align-left {
-  float: left; /* 使图片左对齐 */
-  width:50%; 
+  float: left;
+  width: 50%;
   height: auto;
-  border: 1px solid blue;
+  border: 1px solid #65A39A;
 }
 
-/* 正方形容器 */
-.square-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 3px;
-  width: 300px;
-  height: 300px;
-  flex-shrink: 0;
-}
-
-/* 每个格子的样式 */
-.grid-item {
-  text-align: center;
-  background-color: #f0f0f0;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.grid-item img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 5px;
-}
-
-.grid-item p {
-  margin: 0;
+/* 新闻报道部分标题样式 */
+.title2 {
+  font-size: 2em;
   color: #ffffff;
-  font-size: 12px;
-  text-align: center;
+  margin-top: 0;
 }
 
-.example {
-  font-size: 10px;
-  /* color: #777; */
-  margin-top: 2px;
-  text-align: center;
+/* 新闻报道部分样式 */
+.news-report {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 20px;
+  background-color: white;
+  overflow: hidden;
 }
 
-/* 颜色块 */
-.yellow {
-  background-color: #e9b058;
+.section-title {
+  margin-left: 5%;
+  text-align: left;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
 }
 
-.green {
-  background-color: #65a39a;
+.image-container {
+  flex-basis: 42%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #65A39A;
 }
 
-.g001 {
-  border-top-left-radius: 5px;
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.g002 {
-  border-top-right-radius: 5px;
+.text-container {
+  flex-basis: 42%;
+  padding: 20px;
+  background-color: #65A39A;
+  border-radius: 20px;
 }
 
-.g003 {
-  border-bottom-left-radius: 5px;
-}
-
-.g004 {
-  border-bottom-right-radius: 5px;
+.content {
+  font-size: 1em;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
 }
 
 /* 响应式设计 */
 @media (max-width: 992px) {
-  .title {
+  .title1 {
     font-size: 3.0rem;
   }
-    
-    .team-image1 {
-        max-width: 200px;
-        align-items: center;
-    }
-    .images-container {
-        gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
-    }
+  .title2 {
+    font-size: 1.8rem;
+  }
+
   .subtitle,
   .description {
     font-size: 1.4rem;
-  }
-
-  .square-container {
-    width: 220px;
-    height: 220px;
-  }
-
-  .grid-item img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .grid-item p {
-    font-size: 11px;
-  }
-
-  .example {
-    font-size: 9px;
+    color: #65A39A;
   }
 }
 
 @media (max-width: 768px) {
-  .title {
+  .title1 {
     font-size: 2rem;
+  }
+
+  .title2 {
+    font-size: 1.6rem;
   }
 
   .subtitle,
@@ -264,54 +171,20 @@ img{
     flex-direction: column;
     gap: 10px;
   }
-
-  .square-container {
-    width: 160px;
-    height: 160px;
-    margin-top: 10px;
-  }
-
-  .grid-item img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .grid-item p {
-    font-size: 10px;
-  }
-
-  .example {
-    font-size: 8px;
-  }
 }
 
 @media (max-width: 480px) {
-  .title {
+  .title1 {
     font-size: 1.8rem;
+  }
+
+  .title2 {
+    font-size: 1.4rem;
   }
 
   .subtitle,
   .description {
     font-size: 1rem;
-  }
-
-  .square-container {
-    width: 120px;
-    height: 120px;
-    margin-top: 8px;
-  }
-
-  .grid-item img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .grid-item p {
-    font-size: 9px;
-  }
-
-  .example {
-    font-size: 7px;
   }
 }
 </style>
