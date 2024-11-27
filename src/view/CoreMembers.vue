@@ -33,8 +33,8 @@ export default {
 
     const coreMembers = [
       { image: "src/img/people1.jpg" },
-      { image: "src/img/people1.jpg" },
-      { image: "src/img/people1.jpg" }
+      { image: "src/img/people2.jpg" },
+      { image: "src/img/people4.png" }
     ];
 
     const labs = [
@@ -128,6 +128,7 @@ export default {
 }
 
 @media (max-width: 480px) {
+
   .team-image1,
   .team-image2 {
     max-width: 80px;

@@ -78,7 +78,8 @@ img{
 .images-container {
   padding: 20px;
   display: grid;
-  background-image: url("../img/9.jpg");
+  background-image: url("../img/9.jpg") ;
+  background-size: cover;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   width: 100%;
