@@ -48,6 +48,11 @@
     <div class="content">
       <ApplyCooperation />
     </div>
+
+    <!-- Footer 组件 -->
+     <div class="Footer">
+      <Footer />
+     </div>
   </div>
 </template>
 
@@ -121,6 +126,7 @@ import PublicWelfareSector from './PublicWelfareSector.vue';
 import DreamChaseProject from './DreamChaseProject.vue';
 import CoreMembers from './CoreMembers.vue';
 import ApplyCooperation from './ApplyCooperation.vue';
+import Footer from './Footer.vue';
 </script>
 
 <style scoped>
