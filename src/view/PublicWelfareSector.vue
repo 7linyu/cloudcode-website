@@ -3,13 +3,13 @@
     <!-- 第一部分：公共福利部分 -->
     <div class="title1">{{ $t('publicWelfare.title') }}</div>
     <div class="content-container">
-      <img src="../img/8.jpeg" alt="云萌公益" class="align-left">
       <div class="text-content">
         <div class="subtitle">
           <strong>{{ $t('publicWelfare.subtitle') }}</strong>
         </div>
         <!-- 这里保留第一部分的内容 -->
       </div>
+      <img src="../img/8.jpeg" alt="云萌公益" class="align-right">
     </div>
 
     <!-- 第二部分：新闻报道部分 -->
@@ -75,19 +75,21 @@ img {
 
 .text-content {
   flex: 1;
+  color: #65A39A; /* 设置字体颜色 */
 }
 
-.align-left {
-  float: left;
-  width: 50%;
+.align-right {
+  float: right;
+  width: 45%;
   height: auto;
   border: 1px solid #65A39A;
+  border-radius: 20px; /* 添加圆角 */
 }
 
 /* 新闻报道部分标题样式 */
 .title2 {
   font-size: 2em;
-  color: #ffffff;
+  color: #65A39A;
   margin-top: 0;
 }
 
@@ -114,7 +116,6 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  background-color: #65A39A;
 }
 
 .image-container img {
@@ -126,14 +127,16 @@ img {
 .text-container {
   flex-basis: 42%;
   padding: 20px;
-  background-color: #65A39A;
+    /*盒子颜色 */
+  background-color: #ffffff;
+
   border-radius: 20px;
 }
 
 .content {
   font-size: 1em;
   line-height: 1.5;
-  color: rgb(255, 255, 255);
+  color: #65A39A;
 }
 
 /* 响应式设计 */
@@ -188,3 +191,6 @@ img {
   }
 }
 </style>
+
+
+

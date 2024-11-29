@@ -10,7 +10,7 @@
 
 <style scoped>
 .body {
-  background-color: white;
+  background-color: rgb(255, 253, 253);
   width: 96%;
   margin-left: 2%;
 }

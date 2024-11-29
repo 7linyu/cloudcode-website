@@ -1408,6 +1408,8 @@ body {
     line-height: 1.42857143;
     color: #333;
     background-color: #65A49B;
+    width: 100%;
+    max-width: 430rcapt;
 }
 
 button,

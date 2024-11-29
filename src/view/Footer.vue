@@ -20,7 +20,7 @@ const { t } = useI18n();
     width: 100%;
     height: auto;
     color: #fff;
-    background: #050505;
+    background: #65A49B;
     padding: 1% 1% 1% 7%;
 }
 
@@ -32,7 +32,7 @@ const { t } = useI18n();
 }
 
 p {
-    color: #d3d3d3;
+    color: #ffffff;
     font-size: 12px;
     margin: 5px;
     text-align: left;
@@ -52,6 +52,6 @@ a:hover {
     margin-top: 15px;
     font-size: 12px;
     text-align: left;
-    color: #d3d3d3;
+    color: #ffffff;
 }
 </style>

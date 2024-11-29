@@ -34,7 +34,7 @@ export default {
     const coreMembers = [
       { image: "src/img/people1.jpg" },
       { image: "src/img/people2.jpg" },
-      { image: "src/img/people4.png" }
+      { image: "src/img/people41.jpg" }
     ];
 
     const labs = [
@@ -123,12 +123,11 @@ export default {
 
   .images-container {
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 items per row on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-
   .team-image1,
   .team-image2 {
     max-width: 80px;
@@ -143,3 +142,6 @@ export default {
   }
 }
 </style>
+
+
+
