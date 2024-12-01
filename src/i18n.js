@@ -18,11 +18,11 @@ const messages = {
     },
     publicWelfare: {
       title: '云萌公益',
-      subtitle: '我们是一支热爱服务的团队，致力于为社区提供帮助'
+      subtitle: '云萌工作室，是成都东软学院网络工程系云萌工作室组织成立的公益组织，以计算机科技为航向，汇聚了学院内最富激情与才华的师生团队。们利用自身在软件开发、数据分析、人工智能等领域的专业技能，开发了一系列旨在解决社会问题、提升公众福祉的公益项目。从为偏远地区学校搭建在线教育平台，让知识的光芒照亮每一个角落；到利用大数据分析帮助弱势群体精准对接资源，让每一份帮助都能精准送达。'
     },
     dreamChase: {
       title: '筑梦计划',
-      subTitlePart1: '自云萌成立以来，我们一直热衷于帮助',
+      subTitlePart1: '自云萌公益策划并推行了一项意义重大的 “逐梦计划”，旨在为团队内外面临诸多困难的青年提供切实有效的帮扶，助力他们跨越阻碍，追逐梦想。“逐梦计划” 自实施以来，收获了广大群众的积极响应、高度认可与广泛好评，在社会各界产生了积极且深远的影响。',
       subTitlePart2: '团队内外需要帮助的有志青年',
       statsPart1: '累计资助了xx场比赛',
       statsPart2: '为1000余名青年提供助学支持',
@@ -41,20 +41,20 @@ const messages = {
       title: '核心成员',
       labTitle: '合作实验室',
       members: [
-        { name: '张三', role: '首席技术官' },
-        { name: '李四', role: '产品经理' },
-        { name: '王五', role: '设计师' }
+        { name: '姚雨霏', role: '项目经理' },
+        { name: '高浩然', role: '产品经理' },
+        { name: '龙海洋', role: '工程师' }
       ],
       labs: [
-        { name: '实验室A', description: '专注于人工智能研究' },
-        { name: '实验室B', description: '专注于大数据分析' },
-        { name: '实验室C', description: '专注于云计算技术' }
+        { name: '网络工程实验室', description: '专注于网络工程领域的研究与开发' },
+        { name: '物联网实验室', description: '专注于物联网技术的研发与应用' },
+        { name: 'ACM实验室', description: '专注于人工智能领域的研究与开发' }
       ]
     },
     applyCooperation: {
       title: '申请合作',
       description: '云萌工作室，一个深植于科技创新土壤中的璀璨明珠，致力于成为青年学子探索技术世界的灯塔。',
-      slogan: '用技术改变世界，用智慧点亮未来！'
+      slogan: '用技术改变世界，用智慧点亮未来！我们期待与志同道合的伙伴并肩作战，无论您来自企业、社会组织，还是政府机构、学术团体，只要怀揣公益热忱，云萌皆愿与您携手，共绘公益宏伟蓝图。我们深信，不同领域的智慧碰撞与资源交融，定能催生创新公益模式，拓展公益事业边界，让爱心与善意抵达更远角落，触动更多心灵。'
     },
     footer: {
       title: '云萌工作室',
@@ -81,7 +81,7 @@ const messages = {
     },
     publicWelfare: {
       title: '雲萌公益',
-      subtitle: '我們是一支熱愛服務的團隊，致力於為社區提供幫助'
+      subtitle: '雲萌工作室，是成都東軟學院網絡工程系雲萌工作室組織成立的公益組織，以電腦科技為航向，彙聚了學院內最富激情與才華的師生團隊。 們利用自身在軟體發展、資料分析、人工智慧等領域的專業技能，開發了一系列旨在解决社會問題、提升公眾福祉的公益項目。 從為偏遠地區學校搭建線上教育平臺，讓知識的光芒照亮每一個角落； 到利用大資料分析幫助弱勢群體精准對接資源，讓每一份幫助都能精准送達。'
     },
     dreamChase: {
       title: '築夢計劃',
@@ -144,7 +144,7 @@ const messages = {
     },
     publicWelfare: {
       title: 'CloudMeng Public Welfare',
-      subtitle: 'We are a team passionate about service, dedicated to helping the community.'
+      subtitle: 'Yunmeng Studio is a non-profit organization established by Yunmeng Studio, a department of network engineering at Chengdu Neusoft College. With a focus on computer technology, it brings together the most passionate and talented team of teachers and students within the college. We have utilized our professional skills in software development, data analysis, artificial intelligence, and other fields to develop a series of public welfare projects aimed at solving social problems and improving public welfare. Building an online education platform for schools in remote areas, allowing the light of knowledge to illuminate every corner; By utilizing big data analysis to assist vulnerable groups in accurately accessing resources, every help can be delivered with precision.'
     },
     dreamChase: {
       title: 'Dream Chase Plan',

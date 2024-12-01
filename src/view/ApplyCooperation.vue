@@ -10,7 +10,6 @@
 
     <!-- 联系方式部分 -->
     <div class="contact-info">
-      <p>{{ $t('applyCooperation.contactLabel') }}://此处为联系方式</p>
       <a :href="'mailto:' + email" class="email-link">{{ email }}</a>
     </div>
   </div>
@@ -26,7 +25,7 @@ const { t } = useI18n();
 const name = "ApplyCooperation";
 
 // 联系方式
-const email = "example@example.com";
+const email = "gaohaoran@cloudcode.team";
 </script>
 
 <style scoped>
@@ -42,6 +41,7 @@ h4 {
   color: #65A39A;
   margin-bottom: 40px;
   width: 550px;
+  max-width: 100%;
 }
 
 .main {
@@ -56,6 +56,7 @@ h4 {
   color: #E0B266;
   text-decoration: none;
   font-weight: bold;
+  
 }
 
 .email-link:hover {
