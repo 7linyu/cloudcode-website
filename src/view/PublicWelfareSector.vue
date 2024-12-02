@@ -9,18 +9,17 @@
         </div>
         <!-- 这里保留第一部分的内容 -->
       </div>
-      <img src="../img/0001.png" alt="云萌公益" class="align-right">
+      <img src="../img/0001.png" alt="云萌公益" class="aligned-image">
     </div>
 
     <!-- 第二部分：新闻报道部分 -->
     <div class="news-report">
       <div class="image-container">
-        <img :src="imageUrl" alt="Image Description">
+        <img :src="$t('newsReport.imageUrl')" alt="Image Description" class="aligned-image">
       </div>
       <div class="text-container">
-        <h2 class="section-title">新闻报道</h2>
-        <h1 class="title2">{{ title }}</h1>
-        <p class="content">{{ content }}</p>
+        <h1 class="title2">{{ $t('newsReport.title') }}</h1>
+        <p class="content">{{ $t('newsReport.content') }}</p>
       </div>
     </div>
   </div>
@@ -30,11 +29,6 @@
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-
-// 第二部分的内容
-const imageUrl = 'src/img/9.jpg';
-const title = '成都东软学院公益项目在澳上线，代表团出席发布会并开展访企拓岗专项调研';
-const content = '9 月 26 日，成都东软学院与澳门初创智库协会合作的 Mcode 公益项目于澳门上线，该校副校长张兵率团出席。此项目为免费线上编程学习平台，秉持 “数智赋能教育，创新服务社会” 宗旨，助力全民编程普及，提供教育资源与学习契机，以适应社会变化。会后，代表团赴澳门及横琴粤澳深度合作区展开访企拓岗调研，走访澳门新大陆万博科技有限公司等多家企业，与负责人交流，探寻合作机遇。其间，慰问 2023 届优秀毕业生张瑛铭，其鼓励学弟学妹把握当地发展机遇。此次调研增进学院对澳门产业了解与合作，助于优化人才培养、提升就业质量。张兵副校长称，澳门为学生创业提供空间，学校望与招商投资促进局长期合作创新，持续探索数字化教育模式贡献力量。';
 </script>
 
 <style scoped>
@@ -42,6 +36,15 @@ const content = '9 月 26 日，成都东软学院与澳门初创智库协会合
 img {
   height: auto;
   width: 100%;
+}
+
+/* 统一图片样式 */
+.aligned-image {
+  width: 45%;
+  height: auto;
+  border: 1px solid #65A39A;
+  border-radius: 20px; /* 添加圆角 */
+  max-width: 100%; /* 确保图片在小屏幕上自适应 */
 }
 
 /* 公共福利部分的标题样式 */
@@ -82,15 +85,6 @@ img {
   font-weight: normal; /* 确保字体不加粗 */
 }
 
-.align-right {
-  float: right;
-  width: 45%;
-  height: auto;
-  border: 1px solid #65A39A;
-  border-radius: 20px; /* 添加圆角 */
-  max-width: 100%; /* 确保图片在小屏幕上自适应 */
-}
-
 /* 新闻报道部分标题样式 */
 .title2 {
   font-size: 2em;
@@ -118,10 +112,11 @@ img {
 }
 
 .image-container {
-  flex-basis: 42%;
+  flex-basis: 50%;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  /* width: 120%; */
   max-width: 100%; /* 确保图片在小屏幕上自适应 */
 }
 
@@ -133,10 +128,13 @@ img {
 
 .text-container {
   flex-basis: 42%;
-  padding: 20px;
+  padding: 2px;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 200px;
   max-width: 100%; /* 确保文本容器在小屏幕上自适应 */
+  color: #65A39A; /* 设置字体颜色 */
+  font-size: 1em; /* 使用相对单位设置字体大小 */
+
 }
 
 .content {
@@ -165,9 +163,17 @@ img {
     max-width: 100%; /* 文本内容占满整行 */
   }
 
-  .align-right {
+  .aligned-image {
     width: 100%; /* 图片占满整行 */
-    float: none; /* 清除浮动 */
+  }
+
+  .news-report {
+    flex-direction: column-reverse; /* 在小屏幕上文字在图片上方 */
+  }
+
+  .image-container,
+  .text-container {
+    flex-basis: 100%; /* 图片和文本容器占满整行 */
   }
 }
 
@@ -194,18 +200,25 @@ img {
     max-width: 100%; /* 文本内容占满整行 */
   }
 
-  .align-right {
+  .aligned-image {
     width: 100%; /* 图片占满整行 */
-    float: none; /* 清除浮动 */
   }
 
   .news-report {
-    flex-direction: column;
+    flex-direction: column-reverse; /* 在小屏幕上文字在图片上方 */
   }
 
   .image-container,
   .text-container {
     flex-basis: 100%; /* 图片和文本容器占满整行 */
+  }
+
+  .text-container {
+    padding: 15px; /* 减少内边距以适应较小的屏幕 */
+  }
+
+  .content {
+    font-size: 0.9em; /* 减小字体大小以适应较小的屏幕 */
   }
 }
 
@@ -227,21 +240,25 @@ img {
     max-width: 100%; /* 文本内容占满整行 */
   }
 
-  .align-right {
+  .aligned-image {
     width: 100%; /* 图片占满整行 */
-    float: none; /* 清除浮动 */
   }
 
   .news-report {
-    flex-direction: column;
+    flex-direction: column-reverse; /* 在小屏幕上文字在图片上方 */
   }
 
   .image-container,
   .text-container {
     flex-basis: 100%; /* 图片和文本容器占满整行 */
   }
+
+  .text-container {
+    padding: 10px; /* 减少内边距以适应更小的屏幕 */
+  }
+
+  .content {
+    font-size: 0.8em; /* 进一步减小字体大小以适应更小的屏幕 */
+  }
 }
 </style>
-
-
-

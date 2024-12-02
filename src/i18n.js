@@ -62,6 +62,11 @@ const messages = {
       email: '邮箱：<a href="mailto:support@cloudcode.team">support@cloudcode.team</a>',
       links: '友情链接：<a href="https://geek.cloudcode.team" target="_blank">云萌极客站</a> | <a href="https://learn.cloudcode.team" target="_blank">网工教学平台</a>',
       icp: '© 2022-2023 CloudCode Team. All Rights Reserved | <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022018075号-2</a> | <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51018102000210" target="_blank">川公网安备 51018102000210号</a>'
+    },
+    newsReport: {
+      imageUrl: 'src/img/9.jpg',
+      title: '成都东软学院公益项目在澳上线，代表团出席发布会并开展访企拓岗专项调研',
+      content: '9 月 26 日，成都东软学院与澳门初创智库协会合作的 Mcode 公益项目于澳门上线，该校副校长张兵率团出席。此项目为免费线上编程学习平台，秉持 “数智赋能教育，创新服务社会” 宗旨，助力全民编程普及，提供教育资源与学习契机，以适应社会变化。会后，代表团赴澳门及横琴粤澳深度合作区展开访企拓岗调研，走访澳门新大陆万博科技有限公司等多家企业，与负责人交流，探寻合作机遇。其间，慰问 2023 届优秀毕业生张瑛铭，其鼓励学弟学妹把握当地发展机遇。此次调研增进学院对澳门产业了解与合作，助于优化人才培养、提升就业质量。张兵副校长称，澳门为学生创业提供空间，学校望与招商投资促进局长期合作创新，持续探索数字化教育模式贡献力量。'
     }
   },
   'zh-TW': {
@@ -81,7 +86,7 @@ const messages = {
     },
     publicWelfare: {
       title: '雲萌公益',
-      subtitle: '雲萌工作室，是成都東軟學院網絡工程系雲萌工作室組織成立的公益組織，以電腦科技為航向，彙聚了學院內最富激情與才華的師生團隊。 們利用自身在軟體發展、資料分析、人工智慧等領域的專業技能，開發了一系列旨在解决社會問題、提升公眾福祉的公益項目。 從為偏遠地區學校搭建線上教育平臺，讓知識的光芒照亮每一個角落； 到利用大資料分析幫助弱勢群體精准對接資源，讓每一份幫助都能精准送達。'
+      subtitle: '雲萌工作室，是成都東軟學院網絡工程系雲萌工作室組織成立的公益組織，以電腦科技為航向，彙聚了學院內最富激情與才華的師生團隊。 們利用自身在軟體發展、資料分析、人工智慧等領域的專業技能，開發了一系列旨在解決社會問題、提升公眾福祉的公益項目。 從為偏遠地區學校搭建線上教育平臺，讓知識的光芒照亮每一個角落； 到利用大資料分析幫助弱勢群體精準對接資源，讓每一份幫助都能精準送達。'
     },
     dreamChase: {
       title: '築夢計劃',
@@ -125,6 +130,11 @@ const messages = {
       email: '郵箱：<a href="mailto:support@cloudcode.team">support@cloudcode.team</a>',
       links: '友好連結：<a href="https://geek.cloudcode.team" target="_blank">雲萌極客站</a> | <a href="https://learn.cloudcode.team" target="_blank">網工教學平台</a>',
       icp: '© 2022-2023 CloudCode Team. All Rights Reserved | <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP備2022018075號-2</a> | <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51018102000210" target="_blank">川省公安備案 51018102000210號</a>'
+    },
+    newsReport: {
+      imageUrl: 'src/img/9.jpg',
+      title: '成都東軟學院公益項目在澳上線，代表團出席發佈會並開展訪企拓崗專項調研',
+      content: '9 月 26 日，成都東軟學院與澳門初創智庫協會合作的 Mcode 公益項目於澳門上線，該校副校長張兵率團出席。此項目為免費線上編程學習平台，秉持 「數智賦能教育，創新服務社會」 宗旨，助力全民編程普及其，提供教育資源與學習契機，以適應社會變化。會後，代表團赴澳門及橫琴粵澳深度合作區展開訪企拓崗調研，走訪澳門新大陸萬博科技有限公司等多家企業，與負責人交談，探尋合作機會。期間，慰問 2023 屆優秀畢業生張瑛銘，其鼓勵學弟學妹把握當地發展機遇。此次調研增進學院對澳門產業了解與合作，有助於優化人才培養、提升就業質量。張兵副校長稱，澳門為學生創業提供空間，學校望與招商投資促進局長期合作創新，持續探索數位化教育模式貢獻力量。'
     }
   },
   'en': {
@@ -186,15 +196,21 @@ const messages = {
       title: 'CloudMeng Studio',
       address: 'Address: No. 1, 1st Floor, Building 3, Changshou Community, Qingchengshan Town, Dujiangyan City, Sichuan Province, China',
       email: 'Email: <a href="mailto:support@cloudcode.team">support@cloudcode.team</a>',
-      links: 'Friendly Links: <a href="https://geek.cloudcode.team" target="_blank">CloudMeng Geek Station</a> | <a href="https://learn.cloudcode.team" target="_blank">Network Engineering Learning Platform</a>',
-      icp: '© 2022-2023 CloudCode Team. All Rights Reserved | <a href="https://beian.miit.gov.cn/" target="_blank">Sichuan ICP Record No. 2022018075-2</a> | <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51018102000210" target="_blank">Sichuan Public Security Record No. 51018102000210</a>'
+      links: 'Friendly Links: <a href="https://geek.cloudcode.team" target="_blank">CloudMeng Geeks Station</a> | <a href="https://learn.cloudcode.team" target="_blank">Network Engineering Teaching Platform</a>',
+      icp: '© 2022-2023 CloudCode Team. All Rights Reserved | <a href="https://beian.miit.gov.cn/" target="_blank">License Number: 2022018075</a> | <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51018102000210" target="_blank">Record Code: 51018102000210</a>'
+    },
+    newsReport: {
+      imageUrl: 'src/img/9.jpg',
+      title: 'Chengdu Neusoft College Public Welfare Project Launches in Macao, Delegation Attends Launch Ceremony and Conducts Enterprise Visits',
+      content: 'On September 26th, the Mcode Public Welfare project, a collaboration between Chengdu Neusoft College and the Macao Startup Think Tank Association, was launched in Macao. Vice President Zhang Bing led the delegation to attend the launch ceremony. This project aims to provide free online programming learning platforms, adhering to the principle of "Empowering Education with Digital Intelligence, Innovatively Serving Society," to promote universal programming literacy, offering educational resources and opportunities for learning to adapt to societal changes. After the event, the delegation conducted enterprise visits in Macao and Hengqin-Macao In-depth Cooperation Zone, visiting several companies such as Macao New Continent Wanda Science & Technology Co., Ltd., engaging in discussions with company leaders to explore potential cooperation opportunities. During their visit, they also paid respects to outstanding graduate Zhang Yingming of the Class of 2023, who encouraged his fellow classmates to seize local development opportunities. This visit enhanced the college\'s understanding of the Macao industry and facilitated cooperation, contributing to optimizing talent cultivation and enhancing employment quality. Vice President Zhang Bing stated that Macao provides space for student entrepreneurship, and the school looks forward to long-term collaborative innovation with the Investment Promotion Bureau, continuously exploring digital education models to contribute to society.'
     }
   }
 };
 
-const i18n = createI18n({
-  locale: 'zh-CN', // 设置默认语言
-  messages, // 设置语言包
+export default createI18n({
+  locale: 'zh-CN', // set locale
+  messages,
 });
 
-export default i18n;
+
+
