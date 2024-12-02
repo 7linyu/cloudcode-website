@@ -24,8 +24,8 @@ const messages = {
       title: '筑梦计划',
       subTitlePart1: '自云萌公益策划并推行了一项意义重大的 “逐梦计划”，旨在为团队内外面临诸多困难的青年提供切实有效的帮扶，助力他们跨越阻碍，追逐梦想。“逐梦计划” 自实施以来，收获了广大群众的积极响应、高度认可与广泛好评，在社会各界产生了积极且深远的影响。',
       subTitlePart2: '团队内外需要帮助的有志青年',
-      statsPart1: '累计资助了xx场比赛',
-      statsPart2: '为1000余名青年提供助学支持',
+      statsPart1: '累计资助了50余场比赛',
+      statsPart2: '为百余名青年提供助学支持',
       statsPart3: '自创立以来为学校培养了数百名人才，并提供技术栈方面的教学',
       statsPart4: '持续的关注需要帮助的新人，为其保驾护航...',
       altText1: '助学支持',
@@ -87,8 +87,8 @@ const messages = {
       title: '築夢計劃',
       subTitlePart1: '自雲萌成立以來，我們一直熱衷於幫助',
       subTitlePart2: '團隊內外需要幫助的有志青年',
-      statsPart1: '累計資助了xx場比賽',
-      statsPart2: '為1000餘名青年提供助學支持',
+      statsPart1: '累計資助了50餘場比賽',
+      statsPart2: '為百餘名青年提供助學支持',
       statsPart3: '自創立以來為學校培養了數百名人才，並提供技術棧方面的教學',
       statsPart4: '持續的關注需要幫助的新人，為其保駕護航...',
       altText1: '助學支持',
@@ -117,7 +117,7 @@ const messages = {
     applyCooperation: {
       title: '申請合作',
       description: '雲萌工作室，一個深植於科技創新土壤中的璀璨明珠，致力於成為青年學子探索技術世界的燈塔。',
-      slogan: '用技術改變世界，用智慧點亮未來！'
+      slogan: '用技術改變世界，用智慧點亮未來！ 我們期待與志同道合的夥伴並肩作戰，無論您來自企業、社會組織，還是政府機構、學術團體，只要懷揣公益熱忱，雲萌皆願與您攜手，共繪公益巨集偉藍圖。 我們深信，不同領域的智慧碰撞與資源交融，定能催生創新公益模式，拓展公益事業邊界，讓愛心與善意抵達更遠角落，觸動更多心靈。'
     },
     footer: {
       title: '雲萌工作室',
@@ -150,8 +150,8 @@ const messages = {
       title: 'Dream Chase Plan',
       subTitlePart1: 'Since its establishment, CloudMeng has been enthusiastic about helping',
       subTitlePart2: 'ambitious young people both inside and outside the team',
-      statsPart1: 'Cumulatively sponsored xx competitions',
-      statsPart2: 'Provided financial support to over 1000 young people',
+      statsPart1: 'More than 50 tournaments have been funded',
+      statsPart2: 'It has provided financial aid to more than 100 young people',
       statsPart3: 'Cultivated hundreds of talents for schools and provided technical stack education since its inception',
       statsPart4: 'Continuously supporting new members in need, providing them with guidance and protection...',
       altText1: 'Financial Support',
@@ -179,8 +179,8 @@ const messages = {
     },
     applyCooperation: {
       title: 'Apply for Cooperation',
-      description: 'CloudMeng Studio, a shining pearl deeply rooted in the soil of technological innovation, is committed to becoming a beacon for young students exploring the world of technology.',
-      slogan: 'Change the world with technology, illuminate the future with wisdom!'
+      description: 'Yunmeng Studio, a bright pearl deeply rooted in the soil of scientific and technological innovation, is committed to becoming a beacon for young students to explore the world of technology.',
+      slogan: 'Change the world with technology and light up the future with wisdom! We look forward to working side by side with like-minded partners, whether you are from enterprises, social organizations, government agencies, academic groups, as long as you have a passion for public welfare, Yunmeng is willing to work with you to draw a grand blueprint for public welfare. We firmly believe that the collision of wisdom and the integration of resources in different fields will give birth to innovative philanthropic models, expand the boundaries of philanthropic undertakings, and let love and goodwill reach farther corners and touch more hearts.'
     },
     footer: {
       title: 'CloudMeng Studio',
