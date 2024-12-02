@@ -32,7 +32,6 @@ const email = "gaohaoran@cloudcode.team";
 h1 {
   color: #65A39A;
   margin-bottom: 30px;
-  width: 500px;
   font-weight: bold;
   font-size: 50px;
 }
@@ -40,12 +39,12 @@ h1 {
 h4 {
   color: #65A39A;
   margin-bottom: 40px;
-  width: 550px;
   max-width: 100%;
 }
 
 .main {
   padding: 5%;
+  box-sizing: border-box;
 }
 
 .contact-info {
@@ -56,11 +55,37 @@ h4 {
   color: #E0B266;
   text-decoration: none;
   font-weight: bold;
-  
 }
 
 .email-link:hover {
   text-decoration: underline;
+}
+
+/* 屏幕自适应 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    width: auto;
+  }
+
+  h4 {
+    font-size: 18px;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .main {
+    padding: 2%;
+  }
 }
 </style>
 
