@@ -43,12 +43,12 @@ const messages = {
       members: [
         { name: '姚雨霏', role: '项目经理' },
         { name: '高浩然', role: '产品经理' },
-        { name: '龙海洋', role: '工程师' }
+        { name: '龙海洋', role: '技术总监' }
       ],
       labs: [
-        { name: '网络工程实验室', description: '专注于网络工程领域的研究与开发' },
-        { name: '物联网实验室', description: '专注于物联网技术的研发与应用' },
-        { name: 'ACM实验室', description: '专注于人工智能领域的研究与开发' }
+        { name: '网络工程实验室', description: '实践网络技术的创新空间' },
+        { name: '移动创新实验室', description: '探索移动技术的创新平台' },
+        { name: 'ACM实验室', description: '编程竞技，创新培育基地' }
       ]
     },
     applyCooperation: {
@@ -109,14 +109,14 @@ const messages = {
       title: '核心成員',
       labTitle: '合作實驗室',
       members: [
-        { name: '張三', role: '首席技術官' },
-        { name: '李四', role: '產品經理' },
-        { name: '王五', role: '設計師' }
+        { name: '姚雨霏', role: '項目經理' },
+        { name: '高浩然', role: '產品經理' },
+        { name: '龍海洋', role: '技術總監' }
       ],
       labs: [
-        { name: '實驗室A', description: '專注於人工智能研究' },
-        { name: '實驗室B', description: '專注於大數據分析' },
-        { name: '實驗室C', description: '專注於雲計算技術' }
+        { name: '網路工程實驗室', description: '實踐網路技術的創新空間' },
+        { name: '移動創新實驗室', description: '探索移動技術的創新平臺' },
+        { name: 'ACM實驗室', description: '程式設計競技，創新培育基地' }
       ]
     },
     applyCooperation: {
@@ -177,14 +177,14 @@ const messages = {
       title: 'Core Members',
       labTitle: 'Collaborative Labs',
       members: [
-        { name: 'Zhang San', role: 'Chief Technology Officer' },
-        { name: 'Li Si', role: 'Product Manager' },
-        { name: 'Wang Wu', role: 'Designer' }
+        { name: 'Yao Yufei', role: 'project manager' },
+        { name: 'Gao Haoran', role: 'Product Manager' },
+        { name: 'Dragon Ocean', role: 'Technical Director' }
       ],
       labs: [
-        { name: 'Lab A', description: 'Focused on Artificial Intelligence Research' },
-        { name: 'Lab B', description: 'Focused on Big Data Analysis' },
-        { name: 'Lab C', description: 'Focused on Cloud Computing Technology' }
+        { name: 'Network Engineering Laboratory', description: 'An innovative space for the practice of network technology' },
+        { name: 'Mobile Innovation Lab', description: 'Explore innovative platforms for mobile technology' },
+        { name: 'ACM Laboratories', description: 'Programming competition, innovation cultivation base' }
       ]
     },
     applyCooperation: {

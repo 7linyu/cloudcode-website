@@ -34,7 +34,7 @@ export default {
     const coreMembers = [
       { image: "src/img/people1.jpg" },
       { image: "src/img/people2.jpg" },
-      { image: "src/img/people41.jpg" }
+      { image: "src/img/people411.png" }
     ];
 
     const labs = [
