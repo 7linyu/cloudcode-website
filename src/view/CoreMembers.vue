@@ -38,9 +38,9 @@ export default {
     ];
 
     const labs = [
-      { image: "src/img/111.jpg" },
-      { image: "src/img/222.png" },
-      { image: "src/img/333.png" }
+      { image: "src/img/666.jpg" },
+      { image: "src/img/777.jpg" },
+      { image: "src/img/888.jpg" }
     ];
 
     return {
