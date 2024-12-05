@@ -84,7 +84,7 @@ const items = [
   // { type: 'image', src: 'src/img/cloud.jpg' },
   // { type: 'image', src: 'src/img/9.png' },
   // { type: 'image', src: 'src/img/8.jpeg' },
-  { type: 'video', src: 'src/img/mv.mp4' }
+  { type: 'video', src: 'https://base.cloudcode.team/iCAN/video.mp4' }
 ];
 
 // 当前幻灯片索引
